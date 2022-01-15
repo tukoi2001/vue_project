@@ -16,7 +16,7 @@
         "category_id": 1,
         "author": "Fujiko F. Fujio",
         "public_company": "NXB Kim Đồng",
-        "new":true
+        "sale_status": "new"
       },
       {
         "id":"2",
