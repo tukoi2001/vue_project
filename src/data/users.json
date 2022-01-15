@@ -1,0 +1,56 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstName": "Tu",
+            "lastName": "Tran",
+            "email": "tucute200@gmail.com",
+            "phone": "03456839223",
+            "avatar": "a.jpg",
+            "address": "200 Trường Chinh, Quận Cẩm Lệ, TP Đà Nẵng",
+            "available_to_hire": 0,
+            "role": "admin",
+            "created_at": "2022-1-15",
+            "updated_at": "2022-1-15"
+        },
+        {
+            "id": 2,
+            "firstName": "Long",
+            "lastName": "Vo",
+            "email": "longrui@gmail.com",
+            "phone": "03456839224",
+            "avatar": "a.jpg",
+            "address": "200 Trường Chinh, Quận Cẩm Lệ, TP Đà Nẵng",
+            "available_to_hire": 0,
+            "role": "admin",
+            "created_at": "2022-1-15",
+            "updated_at": "2022-1-15"
+        },
+        {
+            "id": 3,
+            "firstName": "Phong",
+            "lastName": "Le",
+            "email": "phongbun@gmail.com",
+            "phone": "03456839225",
+            "avatar": "a.jpg",
+            "address": "200 Trường Chinh, Quận Cẩm Lệ, TP Đà Nẵng",
+            "available_to_hire": 0,
+            "role": "admin",
+            "created_at": "2022-1-15",
+            "updated_at": "2022-1-15"
+        },
+        {
+            "id": 4,
+            "firstName": "Diu",
+            "lastName": "Sơ",
+            "email": "user001@gmail.com",
+            "phone": "03456839226",
+            "avatar": "a.jpg",
+            "address": "202 Trường Chinh, Quận Cẩm Lệ, TP Đà Nẵng",
+            "available_to_hire": 0,
+            "role": "user",
+            "created_at": "2022-1-15",
+            "updated_at": "2022-1-15"
+        }
+    ]
+}

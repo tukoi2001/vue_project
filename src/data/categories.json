@@ -1,0 +1,32 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "title": "Truyện Tranh",
+            "description": "Truyện tranh dành cho thiếu nhi",
+            "slug": "truyen-tranh",
+            "image": "truyen-tranh.png"
+        },
+        {
+            "id": 2,
+            "title": "Truyện Tranh",
+            "description": "Truyện tranh dành cho thiếu nhi",
+            "slug": "truyen-tranh",
+            "image": "truyen-tranh.png"
+        },
+        {
+            "id": 3,
+            "title": "Truyện Tranh",
+            "description": "Truyện tranh dành cho thiếu nhi",
+            "slug": "truyen-tranh",
+            "image": "truyen-tranh.png"
+        },
+        {
+            "id": 4,
+            "title": "Truyện Tranh",
+            "description": "Truyện tranh dành cho thiếu nhi",
+            "slug": "truyen-tranh",
+            "image": "truyen-tranh.png"
+        }
+    ]
+}
