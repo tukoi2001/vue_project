@@ -4,7 +4,7 @@
         "id":"1",
         "name": "Truyện Doremon",
         "slug": "truyen-doremon",
-        "description": "Truyện tranh",
+        "description": "Truyện tranh", 
         "inventory": 10,
         "unit_price": 1.21,
         "sale_off": 10,
