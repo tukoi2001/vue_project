@@ -1,6 +1,5 @@
 {
-    "users": [
-        {
+    "users": [{
             "id": 1,
             "firstName": "Tu",
             "lastName": "Tran",
@@ -18,7 +17,7 @@
             "firstName": "Long",
             "lastName": "Vo",
             "email": "longrui@gmail.com",
-            "phone": "03456839224",
+            "phone": "03456839656",
             "avatar": "a.jpg",
             "address": "200 Trường Chinh, Quận Cẩm Lệ, TP Đà Nẵng",
             "available_to_hire": 0,
