@@ -3,14 +3,16 @@
     <the-header />
     <router-view />
     <the-footer/>
+    <the-last-footer/>
   </div>
 </template>
 <script>
+import TheLastFooter from './components/common/TheLastFooter.vue';
 import TheFooter from './components/common/TheFooter.vue';
 import TheHeader from "./components/common/TheHeader.vue";
 
 export default {
-  components: { TheHeader, TheFooter },
+  components: { TheHeader, TheFooter, TheLastFooter },
 };
 </script>
 
