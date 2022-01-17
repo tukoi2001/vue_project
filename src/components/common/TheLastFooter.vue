@@ -2,14 +2,13 @@
 <div>
             <div class="footer-bottom">
             <div class="container">
-                <p class="copyright-heading">Suspendisse in auctor augue. Cras fermentum est ac fermentum tempor. Etiam
-                    vel magna volutpat, posuere eros</p>
+                <p class="copyright-heading">Thank you for using our service</p>
                 <a href="#" class="payment-block">
                     <img src="@/assets/images/payment/payment.png" alt="">
                 </a>
-                <p class="copyright-text">Copyright © 2021 <a href="#" class="author">Pustok</a>. All Right Reserved.
+                <p class="copyright-text">Copyright © 2021 <a href="#" class="author">Team3</a>. All Right Reserved.
                     <br>
-                    Design By Pustok</p>
+                    Design By Team3</p>
             </div>
         </div>
 </div>
