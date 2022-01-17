@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row content__login">
         <div class="col-md-12 content__login-form">
-          <form class="form__login">
+          <form class="form__login" @submit.prevent="login">
             <span class="form__title"> Login </span>
             <div class="form__email mb-3">
               <input
@@ -73,7 +73,7 @@
             <div class="form__btn">
               <button type="submit" class="form__btn-submit">Login</button>
             </div>
-            <div class="form__forget text-center pt-3">
+            <div class="form__forget text-center pt-3" v-if="loginFail">
               <span class="form__forget-danger danger">
                 Email hoặc mật khẩu chưa đúng!
               </span>
@@ -108,6 +108,7 @@ export default {
         password: "",
       },
       type: "password",
+      loginFail: false,
     };
   },
   validations: {
@@ -131,7 +132,29 @@ export default {
         else { 
             this.type = 'password';
         }
+    },
+    login() {
+      const res = this.$store.state.users.users;
+      let result = false;
+      res.forEach(user => {
+        if (this.userForm.email === user.email && this.userForm.password === user.password) {
+          result = true;
+        }
+      })
+      if(result === true) {
+        this.$router.push("/");
+      } else {
+        this.loginFail = true;
+      }
     }
+  },
+  watch: { 
+    userForm: {
+      handler: function() {
+        this.loginFail = false;
+      },
+      deep: true,
+    },
   }
 };
 </script>
