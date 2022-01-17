@@ -1,0 +1,134 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.section-padding {
+    text-align: left;
+    padding-bottom: 80px;
+}
+
+.footer-title {
+    margin-bottom: 30px;
+}
+
+.footer-title h3 {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    color: #333;
+}
+
+.normal-list li {
+    padding: 5px 0;
+}
+
+.footer-list {
+    margin-top: 25px;
+    list-style: none;
+}
+
+.footer-title {
+    margin-bottom: 30px;
+}
+
+.footer-contact p {
+    position: relative;
+    margin-bottom: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.footer-contact .label {
+    color: #333;
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.form-control {
+    display: inline-block;
+    padding: 10px 15px;
+    line-height: 30px;
+    height: 52px;
+    color: #7b7b7b;
+    font-size: 15px;
+    width: 100%;
+    border: 2px solid #eeeeee;
+    background: #fff;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.newsletter-form .btn {
+    margin-top: 9px;
+}
+
+.btn--primary {
+    background: #62ab00;
+    color: #fff !important;
+    margin-bottom: 8px;
+}
+
+.social-block .title {
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+    display: block;
+    padding-bottom: 8px;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.social-list .single-social {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    z-index: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    margin-right: 7px;
+    margin-top: 10px;
+}
+
+.social-list .single-social.facebook {
+    background: #2b5893;
+}
+
+.social-list .single-social.twitter {
+    background: #1ea8d4;
+}
+
+.social-list .single-social.google {
+    background: #f96c4b;
+}
+
+.social-list .single-social.youtube {
+    background: #de0f0f;
+}
+
+.single-social i {
+    color: white;
+}

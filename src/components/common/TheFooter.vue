@@ -1,12 +1,79 @@
 <template>
   <div>
-      <h1>Footer</h1>
+      <footer class="site-footer">
+        <div class="container">
+            <div class="row justify-content-between  section-padding text-left">
+                <div class=" col-xl-3 col-lg-4 col-sm-6">
+                    <div class="single-footer pb--40">
+                        <div class="brand-footer footer-title">
+                            <img class="nav__img" src="@/assets/images/logo/logo.png" alt="logo" />
+                        </div>
+                        <div class="footer-contact">
+                            <p><span class="label">Address:</span><span class="text">Example Street 98, HH2 BacHa, New
+                                    York, USA</span></p>
+                            <p><span class="label">Phone:</span><a href="tel:19008198"><span class="text">19008198</span></a></p>
+                            <p><span class="label">Email:</span><a href="mailto:suport@hastech.com"><span class="text">suport@hastech.com</span></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-2 col-sm-6">
+                    <div class="single-footer pb--40">
+                        <div class="footer-title">
+                            <h3>Information</h3>
+                        </div>
+                        <ul class="footer-list normal-list">
+                            <li><a href="">Prices drop</a></li>
+                            <li><a href="">New products</a></li>
+                            <li><a href="">Best sales</a></li>
+                            <li><a href="">Contact us</a></li>
+                            <li><a href="">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-2 col-sm-6">
+                    <div class="single-footer pb--40">
+                        <div class="footer-title">
+                            <h3>Extras</h3>
+                        </div>
+                        <ul class="footer-list normal-list">
+                            <li><a href="">Delivery</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Stores</a></li>
+                            <li><a href="">Contact us</a></li>
+                            <li><a href="">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-sm-6">
+                    <div class="footer-title">
+                        <h3>Newsletter Subscribe</h3>
+                    </div>
+                    <div class="newsletter-form mb--30">
+                        <form action="./php/mail.php">
+                            <input type="email" class="form-control" placeholder="Enter Your Email Address Here...">
+                            <button class="btn btn--primary w-100">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="social-block">
+                        <h3 class="title">STAY CONNECTED</h3>
+                        <ul class="social-list list-inline">
+                            <li class="single-social facebook"><a href=""><i> <b-icon icon="facebook"></b-icon></i></a>
+                            </li>
+                            <li class="single-social twitter"><a href=""><i><b-icon icon="twitter"></b-icon></i></a></li>
+                            <li class="single-social google"><a href=""><i><b-icon icon="google"></b-icon></i></a></li>
+                            <li class="single-social youtube"><a href=""><i><b-icon icon="youtube"></b-icon></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'TheFooter'
+  name: 'TheFooter'
 }
 </script>
 
