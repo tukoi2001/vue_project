@@ -15,25 +15,25 @@
     background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
     background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
-.content__login {
+.content__register {
     background: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
     display: block;
     width: 50%;
+    justify-content: space-between;
     margin: 50px auto;
 }
-.content__login-img img {
+.content__register-img img {
     width: 100%;
     display: block;
-    margin: 20px auto 0;
+    margin: 75px auto 0;
 }
-.content__login-form {
+.content__register-form {
     padding: 50px 100px;
 }
 .form__title {
     font-size: 30px;
-    text-transform: uppercase;
     color: #333333;
     line-height: 1.2;
     text-align: center;
@@ -41,6 +41,7 @@
     display: block;
     padding-bottom: 54px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 .form__email,
 .form__password {
@@ -51,7 +52,6 @@
 }
 .form__email-input,
 .form__password-input {
-    position: relative;
     font-size: 15px;
     line-height: 1.5;
     color: #666666;
@@ -74,7 +74,7 @@
     align-items: center;
     position: absolute;
     border-radius: 25px;
-    top: 13px;
+    top: 12px;
     left: 0;
     width: 40px;
     height: 25px;
@@ -97,15 +97,21 @@
     justify-content: center;
     padding-top: 20px;
 }
+.form__check {
+    padding: 10px 0;
+}
+.form__label {
+    margin-left: 10px;
+}
 .form__btn-submit {
     font-size: 15px;
     line-height: 1.5;
     color: #fff;
     text-transform: uppercase;
-    width: 50%;
+    width: 100%;
     height: 50px;
     border-radius: 25px;
-    background: #62ab00;
+    background: #00c4cc;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -121,18 +127,6 @@
     border: none;
     outline: none;
 }
-.form__forget-span, 
-.form__forget-danger {
-    font-size: 13px;
-    line-height: 1.5;
-    color: #999999;
-}
-.danger {
-    color: red;
-    font-weight: bold;
-    font-size: 1rem;
-}
-.form__forget-link,
 .form__register {
     font-size: 14px;
     text-decoration: none;
@@ -149,50 +143,26 @@
 }
 .form__forget-link:hover,
 .form__register:hover {
-    color: #62ab00;
+    color: #00c4cc;
 }
 
 .form__email-input:focus,
 .form__password-input:focus {
-    border-color: #62ab00;
+    border-color: #00c4cc;
 }
 .form__email-input:focus~.form__email-symbol,
 .form__password-input:focus~.form__password-symbol {
-    color: #62ab00;
+    color: #00c4cc;
     padding-left: 28px;
 }
-.slot__para {
-    margin: 0;
-}
-.form__password-right {
-    font-size: 15px;
-    position: absolute;
-    border-radius: 25px;
-    display: flex;
-    justify-content: flex-end;
-    top: 16px;
-    left: auto;
-    right: 20px;
-    width: 15px;
-    height: 15px;
-    padding-left: 35px;
-    cursor: pointer;
-    color: #666666;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-    padding: 2px;
-}
-.form__label {
+.danger {
+    color: red;
     font-size: 13px;
-    line-height: 1.7;
-    color: #666666;
-    margin: 0px;
 }
-.form-check-input {
-    margin-top: 0;
-}
+.register {
+    font-weight: bold;
+    font-size: 1rem;
+}  
 .invalid-feedback {
     text-align: left;
     margin: 10px 0;

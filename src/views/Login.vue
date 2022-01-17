@@ -2,14 +2,13 @@
   <div class="wrapper">
     <div class="container">
       <div class="row content__login">
-        <div class="content__login-img col-md-6">
-          <!-- <img src="@/assets/images/login/embe.png" alt="" /> -->
-        </div>
-        <div class="col-md-6 content__login-form">
+        <div class="col-md-12 content__login-form">
           <form class="form__login">
             <span class="form__title"> Login </span>
-            <div class="form__email">
+            <div class="form__email mb-3">
               <input
+                @input="handleSubmit()"
+                v-model.trim="userForm.email"
                 type="email"
                 placeholder="Email"
                 class="form__email-input"
@@ -28,11 +27,11 @@
                 <span v-if="!$v.userForm.email.email">Email is invalid</span>
               </div>
             </div>
-            <div class="form__password">
+            <div class="form__password mb-3">
               <input
                 @input="handleSubmit()"
                 v-model.trim="userForm.password"
-                type="password"
+                :type="type"
                 placeholder="Password"
                 class="form__password-input"
                 :class="{
@@ -43,8 +42,8 @@
                 <b-icon icon="lock"></b-icon>
               </span>
               <span class="form__password-right" @click.stop="showPassword()">
-                <!-- <b-icon v-if="type == 'password'" icon="eye"></b-icon>
-                <b-icon v-if="type == 'text'" icon="eye-slash"></b-icon> -->
+                <b-icon v-if="type == 'password'" icon="eye"></b-icon>
+                <b-icon v-if="type == 'text'" icon="eye-slash"></b-icon>
               </span>
               <div
                 v-if="submitted && $v.userForm.password.$error"
@@ -108,6 +107,7 @@ export default {
         email: "",
         password: "",
       },
+      type: "password",
     };
   },
   validations: {
@@ -124,6 +124,14 @@ export default {
         return;
       }
     },
+    showPassword() {
+        if (this.type == "password") {
+            this.type = "text";
+        }
+        else { 
+            this.type = 'password';
+        }
+    }
   }
 };
 </script>
