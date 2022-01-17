@@ -9,10 +9,9 @@
                             <img class="nav__img" src="@/assets/images/logo/logo.png" alt="logo" />
                         </div>
                         <div class="footer-contact">
-                            <p><span class="label">Address:</span><span class="text">Example Street 98, HH2 BacHa, New
-                                    York, USA</span></p>
+                            <p><span class="label">Address:</span><span class="text">69 Truong chinh, Da Nang</span></p>
                             <p><span class="label">Phone:</span><a href="tel:19008198"><span class="text">19008198</span></a></p>
-                            <p><span class="label">Email:</span><a href="mailto:suport@hastech.com"><span class="text">suport@hastech.com</span></a></p>
+                            <p><span class="label">Email:</span><a href="mrbun1906@gmail.com"><span class="text">mrbun1906@gmail.com</span></a></p>
                         </div>
                     </div>
                 </div>
