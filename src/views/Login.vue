@@ -75,7 +75,7 @@
             </div>
             <div class="form__forget text-center pt-3" v-if="loginFail">
               <span class="form__forget-danger danger">
-                Email hoặc mật khẩu chưa đúng!
+                Incorrect email or password!
               </span>
             </div>
             <div class="form__forget text-center pt-3">
@@ -126,12 +126,8 @@ export default {
       }
     },
     showPassword() {
-        if (this.type == "password") {
-            this.type = "text";
-        }
-        else { 
-            this.type = 'password';
-        }
+        if (this.type == "password") { this.type = "text";}
+        else {  this.type = 'password';}
     },
     login() {
       const res = this.$store.state.users.users;
@@ -139,6 +135,7 @@ export default {
       res.forEach(user => {
         if (this.userForm.email === user.email && this.userForm.password === user.password) {
           result = true;
+          localStorage.setItem('dataUserLogin', JSON.stringify(user));
         }
       })
       if(result === true) {

@@ -1,0 +1,74 @@
+<template>
+  <div>
+    <bread-crumbs :title="'My Account'" />
+    <div class="container">
+      <div class="row me">
+        <div class="col-md-3">
+          <div class="myaccount-tab-menu nav">
+            <me-nav v-for="item in navBars" :key="item.id"
+              :icon="item.icon"
+              :title="item.title"
+            />
+            <a href=""
+              ><b-icon class="nav_icon" icon="box-arrow-right"></b-icon>
+              Logout</a>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <me-dashboard />
+          <me-orders />
+          <me-account-details />
+          <me-change-password />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import BreadCrumbs from "../components/common/BreadCrumbs.vue";
+import MeAccountDetails from "../components/me/MeAccountDetails.vue";
+import MeChangePassword from "../components/me/MeChangePassword.vue";
+import MeDashboard from "../components/me/MeDashboard.vue";
+import MeNav from "../components/me/MeNav.vue";
+import MeOrders from "../components/me/MeOrders.vue";
+export default {
+  components: {
+    BreadCrumbs,
+    MeNav,
+    MeDashboard,
+    MeOrders,
+    MeChangePassword,
+    MeAccountDetails,
+  },
+  name: "Me",
+  data() {
+    return {
+      navBars: [
+        {
+          title: "Dashboard",
+          icon: "calendar-check-fill",
+          slug: "dashboard",
+        },
+        {
+          title: "Orders",
+          icon: "cart-plus-fill",
+          slug: "orders",
+        },
+        {
+          title: "Account Details",
+          icon: "person-fill",
+          slug: "account-details",
+        },
+        {
+          title: "Change Password",
+          icon: "key-fill",
+          slug: "change-password",
+        },
+      ],
+    };
+  },
+};
+</script>
+
+<style scoped src="@/assets/css/components/me/Me.css"></style>
