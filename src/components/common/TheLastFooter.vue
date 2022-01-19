@@ -9,8 +9,6 @@
         <p class="copyright-text">
           Copyright © 2021 <a href="#" class="author">Team3</a>. All Right
           Reserved.
-          <br />
-          Design By Team3 Genetic
         </p>
       </div>
     </div>

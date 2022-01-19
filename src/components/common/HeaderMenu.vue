@@ -11,7 +11,7 @@
         <router-link to="/me">My Account</router-link>
       </li>
       <li>
-        <a href="">Logout</a>
+        <a @click.prevent="logout" href="">Logout</a>
       </li>
     </template>
 
@@ -32,6 +32,12 @@ export default {
   computed: {
     dataUserLogin() {
       return this.$store.state.dataUserLogin;
+    }
+  },
+  methods: {
+    logout() {
+      localStorage.setItem('dataUserLogin', '');
+      this.$store.dispatch('actionSetDataUserLogin', '');
     }
   }
 };
