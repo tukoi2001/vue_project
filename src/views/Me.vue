@@ -17,7 +17,7 @@
               </a>
             </me-nav>
 
-            <a href="" class="logout"
+            <a href="" class="logout" @click.prevent="logout"
               ><b-icon class="nav_icon" icon="box-arrow-right"></b-icon>
               Logout</a
             >
@@ -77,6 +77,13 @@ export default {
       currentComponent: "me-dashboard",
     };
   },
+  methods: {
+    logout() {
+      localStorage.setItem('dataUserLogin', '');
+      this.$store.dispatch('actionSetDataUserLogin', '');
+      this.$router.push('/');
+    }
+  }
 };
 </script>
 
