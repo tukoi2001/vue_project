@@ -6,9 +6,18 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    users: dataUsers
+    users: dataUsers,
+    dataUserLogin: null
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    setDataUserLogin(state, user) {
+      state.dataUserLogin = user;
+    }
+  },
+  actions: {
+    actionSetDataUserLogin({commit}, user) {
+      commit('setDataUserLogin', user);
+    }
+  },
   modules: {},
 });

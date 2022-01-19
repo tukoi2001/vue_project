@@ -43,6 +43,7 @@ import HeaderNav from "./HeaderNav.vue";
 export default {
   components: { HeaderLogo, HeaderNav, HeaderIcon },
   name: "TheHeader",
+  
 };
 </script>
 

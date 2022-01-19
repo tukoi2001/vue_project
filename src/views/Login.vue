@@ -136,6 +136,7 @@ export default {
         if (this.userForm.email === user.email && this.userForm.password === user.password) {
           result = true;
           localStorage.setItem('dataUserLogin', JSON.stringify(user));
+          this.$store.dispatch('actionSetDataUserLogin', user);
         }
       })
       if(result === true) {

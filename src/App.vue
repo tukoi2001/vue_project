@@ -13,6 +13,12 @@ import TheHeader from "./components/common/TheHeader.vue";
 
 export default {
   components: { TheHeader, TheFooter, TheLastFooter },
+  created() {
+    const user = JSON.parse(localStorage.getItem('dataUserLogin'))
+    if (user && user != '') {
+      this.$store.dispatch('actionSetDataUserLogin', user);
+    }
+  },
 };
 </script>
 
