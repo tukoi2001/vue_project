@@ -92,3 +92,6 @@
     background-color: #62ab00;
     color: #fff;
 }
+.logout {
+    border-top: none!important;
+}

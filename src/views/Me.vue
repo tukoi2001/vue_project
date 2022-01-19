@@ -5,20 +5,28 @@
       <div class="row me">
         <div class="col-md-3">
           <div class="myaccount-tab-menu nav">
-            <me-nav v-for="item in navBars" :key="item.id"
-              :icon="item.icon"
-              :title="item.title"
-            />
-            <a href=""
+            <me-nav>
+              <a
+                href=""
+                v-for="item in navBars"
+                :key="item.id"
+                @click.prevent="currentComponent = item.slug"
+              >
+                <b-icon class="nav_icon" :icon="item.icon"></b-icon>
+                {{ item.title }}
+              </a>
+            </me-nav>
+
+            <a href="" class="logout"
               ><b-icon class="nav_icon" icon="box-arrow-right"></b-icon>
-              Logout</a>
+              Logout</a
+            >
           </div>
         </div>
         <div class="col-md-9">
-          <me-dashboard />
-          <me-orders />
-          <me-account-details />
-          <me-change-password />
+          <keep-alive>
+            <component :is="currentComponent"></component>
+          </keep-alive>
         </div>
       </div>
     </div>
@@ -48,24 +56,25 @@ export default {
         {
           title: "Dashboard",
           icon: "calendar-check-fill",
-          slug: "dashboard",
+          slug: "me-dashboard",
         },
         {
           title: "Orders",
           icon: "cart-plus-fill",
-          slug: "orders",
+          slug: "me-orders",
         },
         {
           title: "Account Details",
           icon: "person-fill",
-          slug: "account-details",
+          slug: "me-account-details",
         },
         {
           title: "Change Password",
           icon: "key-fill",
-          slug: "change-password",
+          slug: "me-change-password",
         },
       ],
+      currentComponent: "me-dashboard",
     };
   },
 };
