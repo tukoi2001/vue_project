@@ -2,11 +2,11 @@
   <div id="app">
     <the-header />
     <router-view />
-    <the-footer/>
+    <the-footer />
   </div>
 </template>
 <script>
-import TheFooter from './components/common/TheFooter.vue';
+import TheFooter from "./components/common/TheFooter.vue";
 import TheHeader from "./components/common/TheHeader.vue";
 
 export default {
@@ -15,9 +15,9 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 #app {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
