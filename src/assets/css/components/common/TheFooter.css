@@ -133,3 +133,21 @@ a {
 .single-social i {
     color: white;
 }
+
+.btn--primary:hover {
+    background: #333;
+    color: #fff;
+}
+
+.normal-list li a {
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.normal-list li a:hover {
+    color: #62ab00;
+}
+
+.social-list .single-social:hover {
+    background-color: #000;
+}

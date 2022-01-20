@@ -1,0 +1,37 @@
+.section-margin {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.promo-overlay {
+    position: relative;
+}
+
+.promo-overlay:before {
+    position: absolute;
+    content: "";
+    background: #fff;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.promo-image img {
+    width: 100%;
+}
+
+a:hover {
+    color: #0a58ca;
+}
+
+.promo-image {
+    display: block;
+}
+
+.promo-overlay:hover:before {
+    opacity: 0.2;
+}

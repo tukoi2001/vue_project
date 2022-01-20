@@ -1,0 +1,88 @@
+.background-blogs {
+    background-image: url("../../../images/home/promo-banner-full.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.promo-wrapper.promo-type-three {
+    height: 320px;
+}
+
+.promo-wrapper.promo-type-three .promo-text h2 {
+    font-family: "PT Serif", serif;
+    margin-top: 0;
+    color: #fff;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.promo-wrapper.promo-type-three .promo-text h3 {
+    font-family: "PT Serif", serif;
+    margin-top: 0;
+    color: #fff;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1;
+}
+
+.promo-wrapper.promo-type-three .promo-text .btn {
+    font-size: 15px;
+    color: #282828;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 52px;
+    padding: 0 50px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin-top: 30px;
+}
+
+.promo-wrapper .promo-text .btn {
+    pointer-events: visible;
+}
+
+.btn--yellow {
+    background: #eccd00;
+    color: #282828 !important;
+}
+
+.section-margin {
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+.promo-wrapper .promo-text {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    pointer-events: none;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+}
+
+.promo-wrapper {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.btn--yellow:hover {
+    background: #fff;
+    color: #282828;
+}
