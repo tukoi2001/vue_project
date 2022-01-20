@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex align-items-center justify-content-around">
-    <div class="stop_event" @click.stop="showTab = false"></div>
+    <div class="stop_event" @click.stop="showTab = false" :class="{permit: showTab}"></div>
     <div class="user">
       <a href="" class="nav__icon" @click.prevent="showTab = !showTab">
         <b-icon class="" icon="person-circle"></b-icon>
@@ -10,8 +10,7 @@
           <header-menu/>
         </div>
       </transition>
-      </a>
-      
+      </a>      
     </div>
     <a href="" class="nav__icon">
       <b-icon class="" icon="suit-heart"></b-icon>
@@ -34,7 +33,11 @@ export default {
       showTab: false,
     };
   },
+  methods: {
+
+  }
 };
 </script>
 
-<style scoped src="@/assets/css/components/common/TheHeader.css"></style>
+<style scoped src="@/assets/css/components/common/TheHeader.css">
+</style>

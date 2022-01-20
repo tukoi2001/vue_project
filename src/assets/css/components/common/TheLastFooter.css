@@ -1,0 +1,25 @@
+.footer-bottom {
+    padding: 55px 0;
+    text-align: center;
+    background: #333;
+}
+
+.footer-bottom .copyright-heading {
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.footer-bottom .copyright-text {
+    background: none;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-top: 30px;
+    line-height: 24px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.footer-bottom .copyright-text a {
+    color: #62ab00;
+    text-decoration: none;
+}

@@ -1,21 +1,21 @@
 <template>
   <ul>
-    <template>
+    <template v-if="dataUserLogin && dataUserLogin != null">
       <li>
         <h3 class="mb-2">
           Welcome
-          <strong>Phong Bím </strong>
+          <strong>{{dataUserLogin.firstName + ' ' + dataUserLogin.lastName }}</strong>
         </h3>
       </li>
       <li>
         <router-link to="/me">My Account</router-link>
       </li>
       <li>
-        <a href="">Logout</a>
+        <a @click.prevent="logout" href="">Logout</a>
       </li>
     </template>
 
-    <template>
+    <template v-else>
       <li>
         <router-link to="/login">Login</router-link>
       </li>
@@ -29,6 +29,17 @@
 <script>
 export default {
   name: "HeaderMenu",
+  computed: {
+    dataUserLogin() {
+      return this.$store.state.dataUserLogin;
+    }
+  },
+  methods: {
+    logout() {
+      localStorage.setItem('dataUserLogin', '');
+      this.$store.dispatch('actionSetDataUserLogin', '');
+    }
+  }
 };
 </script>
 

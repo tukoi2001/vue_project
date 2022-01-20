@@ -2,15 +2,23 @@
   <div id="app">
     <the-header />
     <router-view />
-    <the-footer />
+    <the-footer/>
+    <the-last-footer/>
   </div>
 </template>
 <script>
-import TheFooter from "./components/common/TheFooter.vue";
+import TheLastFooter from './components/common/TheLastFooter.vue';
+import TheFooter from './components/common/TheFooter.vue';
 import TheHeader from "./components/common/TheHeader.vue";
 
 export default {
-  components: { TheHeader, TheFooter },
+  components: { TheHeader, TheFooter, TheLastFooter },
+  created() {
+    const user = JSON.parse(localStorage.getItem('dataUserLogin'))
+    if (user && user != '') {
+      this.$store.dispatch('actionSetDataUserLogin', user);
+    }
+  },
 };
 </script>
 

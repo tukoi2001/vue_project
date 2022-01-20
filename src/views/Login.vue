@@ -2,14 +2,13 @@
   <div class="wrapper">
     <div class="container">
       <div class="row content__login">
-        <div class="content__login-img col-md-6">
-          <!-- <img src="@/assets/images/login/embe.png" alt="" /> -->
-        </div>
-        <div class="col-md-6 content__login-form">
-          <form class="form__login">
+        <div class="col-md-12 content__login-form">
+          <form class="form__login" @submit.prevent="login">
             <span class="form__title"> Login </span>
-            <div class="form__email">
+            <div class="form__email mb-3">
               <input
+                @input="handleSubmit()"
+                v-model.trim="userForm.email"
                 type="email"
                 placeholder="Email"
                 class="form__email-input"
@@ -28,11 +27,11 @@
                 <span v-if="!$v.userForm.email.email">Email is invalid</span>
               </div>
             </div>
-            <div class="form__password">
+            <div class="form__password mb-3">
               <input
                 @input="handleSubmit()"
                 v-model.trim="userForm.password"
-                type="password"
+                :type="type"
                 placeholder="Password"
                 class="form__password-input"
                 :class="{
@@ -43,8 +42,8 @@
                 <b-icon icon="lock"></b-icon>
               </span>
               <span class="form__password-right" @click.stop="showPassword()">
-                <!-- <b-icon v-if="type == 'password'" icon="eye"></b-icon>
-                <b-icon v-if="type == 'text'" icon="eye-slash"></b-icon> -->
+                <b-icon v-if="type == 'password'" icon="eye"></b-icon>
+                <b-icon v-if="type == 'text'" icon="eye-slash"></b-icon>
               </span>
               <div
                 v-if="submitted && $v.userForm.password.$error"
@@ -74,9 +73,9 @@
             <div class="form__btn">
               <button type="submit" class="form__btn-submit">Login</button>
             </div>
-            <div class="form__forget text-center pt-3">
+            <div class="form__forget text-center pt-3" v-if="loginFail">
               <span class="form__forget-danger danger">
-                Email hoặc mật khẩu chưa đúng!
+                Incorrect email or password!
               </span>
             </div>
             <div class="form__forget text-center pt-3">
@@ -108,6 +107,8 @@ export default {
         email: "",
         password: "",
       },
+      type: "password",
+      loginFail: false,
     };
   },
   validations: {
@@ -123,6 +124,34 @@ export default {
       if (this.$v.$invalid) {
         return;
       }
+    },
+    showPassword() {
+        if (this.type == "password") { this.type = "text";}
+        else {  this.type = 'password';}
+    },
+    login() {
+      const res = this.$store.state.users.users;
+      let result = false;
+      res.forEach(user => {
+        if (this.userForm.email === user.email && this.userForm.password === user.password) {
+          result = true;
+          localStorage.setItem('dataUserLogin', JSON.stringify(user));
+          this.$store.dispatch('actionSetDataUserLogin', user);
+        }
+      })
+      if(result === true) {
+        this.$router.push("/");
+      } else {
+        this.loginFail = true;
+      }
+    }
+  },
+  watch: { 
+    userForm: {
+      handler: function() {
+        this.loginFail = false;
+      },
+      deep: true,
     },
   }
 };

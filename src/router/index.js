@@ -25,6 +25,21 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "login" */ "../views/Login.vue"),
   },
+  {
+    path: "/register",
+    name: "Register",
+    component: () =>
+      import(/* webpackChunkName: "register" */ "../views/Register.vue"),
+  },
+  {
+    path: "/me",
+    name: "Me",
+    component: () =>
+      import(/* webpackChunkName: "me" */ "../views/Me.vue"),
+    meta: {
+      required: true,
+    }
+  },
 ];
 
 const router = new VueRouter({
@@ -33,4 +48,19 @@ const router = new VueRouter({
   routes,
 });
 
+router.beforeEach((to, from, next) => {
+  if (to.meta && to.meta.required) {
+    const auth = localStorage.getItem('dataUserLogin');
+    if (auth && auth !== '') {
+      next()
+    }
+    else {
+      alert("Bạn cần đăng nhập để sử dụng chức năng này!");
+      next({path: '/login'});
+    }
+  }
+  else {
+    next();
+  }
+})
 export default router;
