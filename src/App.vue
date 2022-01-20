@@ -18,7 +18,23 @@ export default {
     if (user && user != '') {
       this.$store.dispatch('actionSetDataUserLogin', user);
     }
+    const dataRegister = JSON.parse(localStorage.getItem('dataUserRegister'));
+    if (dataRegister && dataRegister != '') {
+      this.$store.dispatch('actionCreateUser', dataRegister); 
+    }
   },
+  beforeMount() {
+    const newPassword = JSON.parse(localStorage.getItem('newPassword'));
+    if (newPassword && newPassword != '') {
+      this.$store.dispatch('actionChangePassword', newPassword); 
+    }
+  },
+  mounted() {
+    const infoModifier = JSON.parse(localStorage.getItem('infoModifier'));
+    if (infoModifier && infoModifier != '') {
+      this.$store.dispatch('actionSaveInformation', infoModifier); 
+    }
+  }
 };
 </script>
 

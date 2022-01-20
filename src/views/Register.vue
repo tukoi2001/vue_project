@@ -168,11 +168,18 @@ export default {
     data() {
     return {
       userForm: {
+        id: 6,
         firstName: "",
         lastName: "",
         email: "",
         password: "",
         confirmPassword: "",
+        address: "",
+        phone: "",
+        purchase_status: 0,
+        role: "user",
+        created_at: new Date().toLocaleString(),
+        updated_at: ""
       },
       submitted: false,
     };
@@ -194,7 +201,13 @@ export default {
         return;
       }
     },
-  }
+    register() {
+      this.$store.dispatch('actionCreateUser',  this.userForm);
+      localStorage.setItem('dataUserRegister', JSON.stringify(this.userForm))
+      alert("Đăng ký tc");
+      this.$router.push("/login");
+    }
+  },
 }
 </script>
 
