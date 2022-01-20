@@ -1,0 +1,135 @@
+a {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    color: inherit;
+    text-decoration: none;
+}
+.product-card {
+    margin-top: 40px;
+    text-align: center;
+}
+.product-card .product-header {
+    padding: 0 15px;
+}
+.product-card .author {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    color: #333;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+}
+.product-card h3 a {
+    padding: 0;
+    display: block;
+    text-transform: capitalize;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+.product-card--body {
+    position: relative;
+    padding: 1px;
+}
+.product-card--body:not(:last-child) {
+    border-right: 1px solid lightgrey;
+}
+.product-card .card-image {
+    position: relative;
+}
+.product-card .hover-contents {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+.product-card:hover .hover-contents {
+    visibility: visible;
+    opacity: 1;
+}
+.product-card .hover-contents .hover-btns {
+    position: absolute;
+    opacity: 0;
+    top: 55%;
+    left: 50%;
+    margin: auto;
+    background: #fff;
+    z-index: 3;
+    border-radius: 3px;
+    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 15%);
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-in-out;
+    display: flex;
+}
+.product-card:hover .hover-contents .hover-btns {
+    opacity: 1;
+    top: 50%;
+}
+.card-image img {
+    width: 80%;
+}
+.product-card .hover-contents {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+.product-card .hover-contents .hover-btns .single-btn {
+    line-height: 47px;
+    padding: 0 15.5px;
+    border-right: 1px solid #e5e5e5;
+    color: dimgray;
+}
+.product-card .hover-contents .hover-btns .single-btn:hover {
+    color: #62ab00;
+}
+.product-card .price-block {
+    text-align: center;
+    position: relative;
+    margin-top: 24px;
+}
+.price {
+    color: #929292;
+    font-size: 18px;
+    color: #62ab00;
+    font-weight: 600;
+}
+.price-old {
+    color: #999999;
+    text-decoration: line-through;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 5px;
+}
+.price-discount {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    line-height: 24px;
+    padding: 0 7px;
+    min-width: 46px;
+    background: #bd0018;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 5px;
+    z-index: 3;
+    border-radius: 3px;
+}
