@@ -38,6 +38,9 @@ export default {
     logout() {
       localStorage.setItem('dataUserLogin', '');
       this.$store.dispatch('actionSetDataUserLogin', '');
+      if(this.$router.name !== 'Home') {
+        this.$router.push('/')
+      }
     }
   }
 };

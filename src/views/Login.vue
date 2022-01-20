@@ -131,8 +131,16 @@ export default {
     },
     login() {
       const res = this.$store.state.users.users;
+      const response = this.$store.state.usersRegister;
       let result = false;
       res.forEach(user => {
+        if (this.userForm.email === user.email && this.userForm.password === user.password) {
+          result = true;
+          localStorage.setItem('dataUserLogin', JSON.stringify(user));
+          this.$store.dispatch('actionSetDataUserLogin', user);
+        }
+      })
+      response.forEach(user => {
         if (this.userForm.email === user.email && this.userForm.password === user.password) {
           result = true;
           localStorage.setItem('dataUserLogin', JSON.stringify(user));
