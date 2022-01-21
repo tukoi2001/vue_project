@@ -126,6 +126,7 @@
                 class="form-check-input"
                 type="checkbox"
                 id="flexCheckDefault"
+                v-model="check"
               />
               <label
                 class="form-check-label form__label"
@@ -133,7 +134,7 @@
               >
                 I agree all statements in Terms of Conditions
               </label>
-              <div class="form__forget text-start pt-3">
+              <div class="form__forget text-start pt-3" v-if="checkTerm">
                 <span class="form__forget-danger danger">
                   Làm ơn tích vào điều khoản sử dụng!
                 </span>
@@ -142,9 +143,12 @@
             <div class="form__btn">
               <button type="submit" class="form__btn-submit">register</button>
 
-              <div class="form__forget text-center pt-3">
-                <span class="form__forget-danger danger register">
+              <div class="form__forget text-center pt-3" >
+                <span class="form__forget-danger danger register" v-if="errorEmail">
                   Email đã được đăng ký! Xin vui lòng nhập email khác!
+                </span>
+                 <span class="form__forget-danger danger register" v-if="inputInfo">
+                  Vui lòng nhập thông tin!
                 </span>
               </div>
             </div>
@@ -182,6 +186,11 @@ export default {
         updated_at: "",
       },
       submitted: false,
+      checkTerm: false,
+      errorEmail: false,
+      check: false,
+      result: false,
+      inputInfo: false,
     };
   },
   mounted() {
@@ -205,12 +214,68 @@ export default {
       }
     },
     register() {
-      this.$store.dispatch("actionCreateUser", this.userForm);
-      localStorage.setItem("dataUserRegister", JSON.stringify(this.userForm));
-      alert("Đăng ký tc");
-      this.$router.push("/login");
+      const res = this.$store.state.users.users;
+      const response = this.$store.state.usersRegister;
+      res.forEach(user => {
+        if (this.userForm.email === user.email) {
+          this.errorEmail = true;
+          this.result = false;
+        }
+        else {
+          this.result = true;
+        }
+      })
+      response.forEach(user => {
+        if (this.userForm.email === user.email) {
+          this.errorEmail = true;
+          this.result = false;
+        } 
+        else {
+          this.result = true;
+        }
+      })
+      if(this.result === true) {
+        this.afterRegister();
+      }
     },
+    afterRegister() {
+      if(this.userForm.email === '' && this.userForm.password === '' && this.userForm.confirmPassword === '') {
+        this.inputInfo = true;
+      }
+      else {  
+        if (this.check === false) {
+          this.checkTerm = true;
+        }
+        else {  
+          if (this.userForm.password === this.userForm.confirmPassword) {
+            this.$store.dispatch("actionCreateUser", this.userForm);
+            localStorage.setItem("dataUserRegister", JSON.stringify(this.userForm));
+            alert("Đăng ký thành công");
+            this.$router.push("/login");
+          }
+          else {
+            alert("Mày nhập ngu à!");
+          }
+        }
+      }
+    }
   },
+  watch: { 
+    check:  {
+      handler() {
+        if(this.check === true) {
+          this.checkTerm = false;
+        }
+      }
+    },
+    'userForm.email': {
+      handler() {
+        this.errorEmail = false;
+        this.inputInfo = false;
+      },
+      deep: true
+    }
+  }
 };
 </script>
 
