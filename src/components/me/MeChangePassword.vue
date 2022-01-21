@@ -110,10 +110,11 @@ export default {
       this.$v.$touch();
       if (this.$v.$invalid) {
         return;
-      }
+      }   
     },
     checkCurrentPassword() {
-      const pw = this.$store.state.dataUserLogin.password;
+      const id = this.$store.state.dataUserLogin.id;
+      const pw = this.$store.state.usersRegister[id].password;
       if (pw !== this.userPassword.currentPassword) {
         this.passwordWrong = true;
       }else {
@@ -133,6 +134,10 @@ export default {
       },
       deep: true
     }
+  },
+  mounted() {
+    console.log(this.$store.state.dataUserLogin.id);
+    console.log(this.$store.state.usersRegister)
   }
 };
 </script>

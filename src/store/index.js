@@ -28,8 +28,8 @@ export default new Vuex.Store({
       Vue.set(state.dataUserLogin, 'updated_at', user.updated_at);
     },
     changePassword(state, user) {
-      Vue.set(state.dataUserLogin, 'password', user.password);
-      Vue.set(state.dataUserLogin, 'confirmPassword', user.confirmPassword);
+      Vue.set(state.usersRegister[0], 'password', user.password);
+      Vue.set(state.usersRegister[0], 'confirmPassword', user.confirmPassword);
     }
   },
   actions: {
