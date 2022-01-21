@@ -143,10 +143,10 @@
               <button type="submit" class="form__btn-submit">register</button>
 
               <div class="form__forget text-center pt-3">
-              <span class="form__forget-danger danger register">
+                <span class="form__forget-danger danger register">
                   Email đã được đăng ký! Xin vui lòng nhập email khác!
-                  </span>
-            </div>
+                </span>
+              </div>
             </div>
             <div class="text-center pt-5">
               <router-link to="/login" class="form__register"
@@ -164,12 +164,12 @@
 <script>
 import { required, email, minLength, sameAs } from "vuelidate/lib/validators";
 export default {
-    name: 'Register',
-    data() {
+  name: "Register",
+  data() { 
     return {
       userForm: {
-        id: 6,
-        firstName: "",
+        id: 0,
+        firstName: "", 
         lastName: "",
         email: "",
         password: "",
@@ -179,10 +179,13 @@ export default {
         purchase_status: 0,
         role: "user",
         created_at: new Date().toLocaleString(),
-        updated_at: ""
+        updated_at: "",
       },
       submitted: false,
     };
+  },
+  mounted() {
+    
   },
   validations: {
     userForm: {
@@ -194,7 +197,7 @@ export default {
     },
   },
   methods: {
-      handleSubmit() {
+    handleSubmit() {
       this.submitted = true;
       this.$v.$touch();
       if (this.$v.$invalid) {
@@ -202,15 +205,13 @@ export default {
       }
     },
     register() {
-      this.$store.dispatch('actionCreateUser',  this.userForm);
-      localStorage.setItem('dataUserRegister', JSON.stringify(this.userForm))
+      this.$store.dispatch("actionCreateUser", this.userForm);
+      localStorage.setItem("dataUserRegister", JSON.stringify(this.userForm));
       alert("Đăng ký tc");
       this.$router.push("/login");
-    }
+    },
   },
-}
+};
 </script>
 
-<style scoped src="@/assets/css/components/register/Register.css">
-
-</style>
+<style scoped src="@/assets/css/components/register/Register.css"></style>
