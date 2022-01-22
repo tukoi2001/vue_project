@@ -136,8 +136,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$store.state.dataUserLogin.id);
-    console.log(this.$store.state.usersRegister)
+
   }
 };
 </script>
