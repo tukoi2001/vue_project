@@ -118,12 +118,17 @@ export default {
       if (pw !== this.userPassword.currentPassword) {
         this.passwordWrong = true;
       }else {
-        const newPassword = {
-          password: this.userPassword.password,
-          confirmPassword: this.userPassword.confirmPassword,
+        if (this.userPassword.password !== this.userPassword.confirmPassword) {
+          alert("Mày nhập ngu à!");         
         }
-        this.$store.dispatch('actionChangePassword', newPassword);
-        localStorage.setItem('newPassword', JSON.stringify(newPassword))
+        else { 
+          const newPassword = {
+            password: this.userPassword.password,
+            confirmPassword: this.userPassword.confirmPassword,
+          }
+          this.$store.dispatch('actionChangePassword', newPassword);
+          localStorage.setItem('newPassword', JSON.stringify(newPassword))
+        }
       }
     }
   },
