@@ -162,12 +162,19 @@
         </div>
       </div>
     </div>
+    <popup :notifications="'Successful account registration!'" v-if="showPopup" @myEvent="hidePopup">
+      <template v-slot:button>
+        <button type="submit" @click="hidePopup">OK</button>
+      </template>
+    </popup>
   </div>
 </template>
 
 <script>
 import { required, email, minLength, sameAs } from "vuelidate/lib/validators";
+import Popup from '../components/common/Popup.vue';
 export default {
+  components: { Popup },
   name: "Register",
   data() { 
     return {
@@ -191,6 +198,7 @@ export default {
       check: false,
       result: false,
       inputInfo: false,
+      showPopup: false,
     };
   },
   mounted() {
@@ -212,6 +220,9 @@ export default {
       if (this.$v.$invalid) {
         return;
       }
+    },
+    hidePopup() {
+      this.showPopup = false;
     },
     register() {
       const res = this.$store.state.users.users;
@@ -250,11 +261,16 @@ export default {
           if (this.userForm.password === this.userForm.confirmPassword) {
             this.$store.dispatch("actionCreateUser", this.userForm);
             localStorage.setItem("dataUserRegister", JSON.stringify(this.userForm));
-            alert("Đăng ký thành công");
-            this.$router.push("/login");
+            this.showPopup = true;
+            setTimeout(() =>{
+              this.showPopup = false;
+            }, 2500);
+            setTimeout(() =>{
+              this.$router.push("/login");
+            }, 3000)
           }
           else {
-            alert("Mày nhập ngu à!");
+            alert("Confirm Password isn't match! Please try again!");
           }
         }
       }
