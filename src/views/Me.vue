@@ -82,7 +82,7 @@ export default {
       localStorage.setItem('dataUserLogin', '');
       this.$store.dispatch('actionSetDataUserLogin', '');
       this.$router.push('/');
-    }
+    }, 
   }
 };
 </script>
