@@ -16,6 +16,11 @@
     color: #000;
     font-size: 1.6rem;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+}
+.nav__icon:hover {
+    color: #62ab00;
 }
 .nav__icon span {
     display: block;
@@ -112,6 +117,10 @@
     border-radius: 0;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+.header-search-block button:hover {
+    opacity: 0.8;
 }
 .header_icon {
     margin: auto;
@@ -154,3 +163,6 @@
     }
 }
 
+.router-link-exact-active {
+    color: #62ab00;
+  }
