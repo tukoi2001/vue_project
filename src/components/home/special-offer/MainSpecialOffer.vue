@@ -28,7 +28,7 @@ export default {
       swiperOption: {
         slidesPerView: 6,
         spaceBetween: 30,
-        slidesPerGroup: 1,
+        slidesPerGroup: 2,
         loop: true,
         loopFillGroupWithBlank: true,
         pagination: {
@@ -95,25 +95,7 @@ export default {
           price: 51.2,
           priceOld: 51.2,
           priceDiscount: 20,
-        },
-        {
-          mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-2.jpg"),
-          author: "Cpple",
-          title: "3 Ways To Have (A) More Appealing BOOK",
-          price: 51.2,
-          priceOld: 51.2,
-          priceDiscount: 20,
-        },
-        {
-          mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-2.jpg"),
-          author: "Cpple",
-          title: "3 Ways To Have (A) More Appealing BOOK",
-          price: 51.2,
-          priceOld: 51.2,
-          priceDiscount: 20,
-        },
+        }
       ],
     };
   },

@@ -3,10 +3,11 @@
     <slider />
     <home-features-section />
     <home-background-sale />
-    <home-latest-blogs />
     <main-product-categories/>
     <main-special-offer/>
+    <best-seller/>
     <home-background-blogs />
+    <home-latest-blogs />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import HomeBackgroundSale from '../components/home/feature/HomeBackgroundSale.vu
 import HomeBackgroundBlogs from '../components/blogs/HomeBackgroundBlogs.vue';
 import HomeLatestBlogs from '../components/blogs/HomeLatestBlogs.vue';
 import MainSpecialOffer from '../components/home/special-offer/MainSpecialOffer.vue';
+import BestSeller from '../components/home/best-seller/BestSeller.vue';
 export default {
   name: "Home",
   components: {
@@ -27,7 +29,8 @@ export default {
     HomeBackgroundSale,
     HomeBackgroundBlogs,
     HomeLatestBlogs,
-    MainSpecialOffer
+    MainSpecialOffer,
+    BestSeller
   },
 };
 </script>
