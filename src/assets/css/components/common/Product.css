@@ -77,6 +77,7 @@ a {
 }
 .card-image img {
     width: 80%;
+    border-bottom: outset;
 }
 .product-card .hover-contents {
     position: absolute;

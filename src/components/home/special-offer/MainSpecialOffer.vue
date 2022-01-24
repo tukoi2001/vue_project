@@ -1,34 +1,45 @@
 <template>
-  <div class="featured-products">
-    <div class="container">
-      <div class="row">
-        <div
-          class="col-lg-3 col-xl-3 col-md-4 col-sm-6 col-xs-6 product-item"
-          v-for="(item, index) in listProducts"
-          :key="index"
-        >
-          <product
-            :mainImage="item.mainImage"
-            :hoverImage="item.hoverImage"
-            :author="item.author"
-            :title="item.title"
-            :price="item.price"
-            :priceOld="item.priceOld"
-            :priceDiscount="item.priceDiscount"
-          />
-        </div>
-      </div>
+  <div class="special-offer">
+    <div class="promo-section-heading">
+      <h2>Deal of the day up to 20% off Special offer</h2>
     </div>
+    <swiper class="swiper" :options="swiperOption">
+      <swiper-slide v-for="(item, index) in listProducts" :key="index"
+        ><product
+          :mainImage="item.mainImage"
+          :hoverImage="item.hoverImage"
+          :author="item.author"
+          :title="item.title"
+          :price="item.price"
+          :priceOld="item.priceOld"
+          :priceDiscount="item.priceDiscount"
+      /></swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
   </div>
 </template>
 
 <script>
-import Product from "../../common/Product.vue";
+import Product from '../../common/Product.vue'
 export default {
   components: { Product },
-  name: "FeaturedProducts",
   data() {
     return {
+      swiperOption: {
+        slidesPerView: 6,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      },
       listProducts: [
         {
           mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
@@ -109,5 +120,7 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style
+  scoped
+  src="@/assets/css/components/home/special-offer/MainSpecialOffer.css"
+></style>

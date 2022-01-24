@@ -3,12 +3,16 @@
     <div class="container">
       <div class="sb-custom-tab">
         <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a @click.prevent="currentTab = 'tabOne'" class="nav-link"
-              >Featured Products</a
+          <li class="nav-item" v-for="(item, index) in tabs" :key="index">
+            <a
+              @click.prevent="currentTab = item.slug"
+              class="nav-link"
+              :class="{ active : currentTab == item.slug }"
+            >
+              {{ item.title }}</a
             >
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a @click.prevent="currentTab = 'tabTwo'" class="nav-link"
               >New Arrivals</a
             >
@@ -17,7 +21,7 @@
             <a @click.prevent="currentTab = 'tabThree'" class="nav-link"
               >Most view products</a
             >
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="tab-content">
@@ -38,6 +42,20 @@ export default {
   data() {
     return {
       currentTab: "tabOne",
+      tabs: [
+        {
+          title: "Featured Products",
+          slug: "tabOne",
+        },
+        {
+          title: "New Arrivals",
+          slug: "tabTwo",
+        },
+        {
+          title: "Most view products",
+          slug: "tabThree",
+        },
+      ],
     };
   },
 };
