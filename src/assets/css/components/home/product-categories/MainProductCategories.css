@@ -33,8 +33,7 @@
     -webkit-transition: border-color 0s, color 0.4s;
     transition: border-color 0s, color 0.4s;
 }
-.sb-custom-tab .nav.nav-tabs .nav-item .nav-link:active,
- .sb-custom-tab .nav.nav-tabs .nav-item .nav-link.show {
-    border-color: #62ab00;
-    color: #62ab00;
+a.nav-link.active {
+    border-color: #62ab00!important;
+    color: #62ab00!important;
 }

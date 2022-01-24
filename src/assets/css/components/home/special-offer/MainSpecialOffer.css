@@ -1,0 +1,19 @@
+.promo-section-heading {
+    background: #62ab00;
+    border-radius: 3px;
+    padding: 9px;
+    margin-bottom: 56px;
+    text-align: center;
+}
+.promo-section-heading h2 {
+    font-size: 22px;
+    color: #fff;
+    line-height: 30px;
+    text-transform: none;
+    padding: 0;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.swiper {
+    padding-bottom: 75px;
+}
