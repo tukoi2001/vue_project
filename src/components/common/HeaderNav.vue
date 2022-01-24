@@ -11,7 +11,7 @@
           >
           <b-nav-item
             ><router-link to="/product" class="nav__link"
-              >Shop</router-link
+              >Book</router-link
             ></b-nav-item
           >
           <b-nav-item
@@ -41,4 +41,6 @@ export default {
 };
 </script>
 
-<style scoped src="@/assets/css/components/common/TheHeader.css"></style>
+<style scoped src="@/assets/css/components/common/TheHeader.css">
+
+</style>
