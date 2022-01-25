@@ -2,31 +2,52 @@
     "categories": [
         {
             "id": 1,
-            "title": "Truyện Tranh",
-            "description": "Truyện tranh dành cho thiếu nhi",
-            "slug": "truyen-tranh",
-            "image": "truyen-tranh.png"
+            "title": "Văn học",
+            "description": "Gồm các loại như tiểu thuyết, truyện ngắn, ngôn tình ...",
+            "slug": "van-hoc",
+            "image": "van-hoc.png"
         },
         {
             "id": 2,
-            "title": "Truyện Tranh",
-            "description": "Truyện tranh dành cho thiếu nhi",
-            "slug": "truyen-tranh",
-            "image": "truyen-tranh.png"
+            "title": "Thiếu nhi",
+            "description": "Gồm các loại như manga, comic, kỹ năng sống cho trẻ ...",
+            "slug": "thieu-nhi",
+            "image": "thieu-nhi.png"
         },
         {
             "id": 3,
-            "title": "Truyện Tranh",
-            "description": "Truyện tranh dành cho thiếu nhi",
-            "slug": "truyen-tranh",
-            "image": "truyen-tranh.png"
+            "title": "Kinh tế",
+            "description": "Gồm các loại như bài học kinh doanh, quản trị, marketing ...",
+            "slug": "kinh-te",
+            "image": "kinh-te.png"
         },
         {
             "id": 4,
-            "title": "Truyện Tranh",
-            "description": "Truyện tranh dành cho thiếu nhi",
-            "slug": "truyen-tranh",
-            "image": "truyen-tranh.png"
+            "title": "Tiểu sử",
+            "description": "Gồm các loại như câu chuyện cuộc đời, chính trị, kinh tế ...",
+            "slug": "tieu-su",
+            "image": "tieu-su.png"
+        },
+        {
+            "id": 5,
+            "title": "Kỹ năng sống",
+            "description": "Gồm các loại như kỹ năng sống, rèn luyện nhân cách, tâm lý ...",
+            "slug": "ky-nang-song",
+            "image": "ky-nang-song.png"
+        },
+        {
+            "id": 6,
+            "title": "Ngoại ngữ",
+            "description": "Gồm các loại như tiếng Anh, tiếng Nhật, tiếng Hoa, tiếng Hàn ...",
+            "slug": "sach-ngoai-ngu",
+            "image": "sach-ngoai-ngu.png"
+        },
+        {
+            "id": 7,
+            "title": "Giáo khoa",
+            "description": "Gồm các loại như giáo khoa, tham khảo, luyện thi ...",
+            "slug": "giao-khoa",
+            "image": "giao-khoa.png"
         }
     ]
 }
