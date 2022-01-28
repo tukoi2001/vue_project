@@ -81,6 +81,14 @@ export default {
           priceOld: 51.2,
           priceDiscount: 20,
         },
+        {
+          mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
+          author: "Cpple",
+          title: "3 Ways To Have (A) More Appealing BOOK",
+          price: 51.2,
+          priceOld: 51.2,
+          priceDiscount: 20,
+        },
       ],
     };
   },

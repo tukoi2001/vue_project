@@ -1,5 +1,6 @@
 <template>
   <div>
+    <the-header/>
     <bread-crumbs :title="'My Account'" />
     <div class="container">
       <div class="row me">
@@ -34,6 +35,7 @@
 </template>
 
 <script>
+import TheHeader from '../components/common/TheHeader.vue';
 import BreadCrumbs from "../components/common/BreadCrumbs.vue";
 import MeAccountDetails from "../components/me/MeAccountDetails.vue";
 import MeChangePassword from "../components/me/MeChangePassword.vue";
@@ -48,6 +50,7 @@ export default {
     MeOrders,
     MeChangePassword,
     MeAccountDetails,
+    TheHeader
   },
   name: "Me",
   data() {

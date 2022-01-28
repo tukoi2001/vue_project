@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <the-header/>
     <slider />
     <home-features-section />
     <home-background-sale />
@@ -9,6 +10,8 @@
     <home-background-blogs />
     <home-latest-blogs />
     <scroll-top-arrow/>
+    <the-footer/>
+    <the-last-footer/>
   </div>
 </template>
 
@@ -22,6 +25,9 @@ import HomeLatestBlogs from '../components/blogs/HomeLatestBlogs.vue';
 import MainSpecialOffer from '../components/home/special-offer/MainSpecialOffer.vue';
 import BestSeller from '../components/home/best-seller/BestSeller.vue';
 import ScrollTopArrow from '../components/common/ScrollTopArrow.vue';
+import TheHeader from '../components/common/TheHeader.vue';
+import TheFooter from '../components/common/TheFooter.vue';
+import TheLastFooter from '../components/common/TheLastFooter.vue';
 export default {
   name: "Home",
   components: {
@@ -33,7 +39,10 @@ export default {
     HomeLatestBlogs,
     MainSpecialOffer,
     BestSeller,
-    ScrollTopArrow
+    ScrollTopArrow,
+    TheHeader,
+    TheFooter,
+    TheLastFooter
   },
 };
 </script>

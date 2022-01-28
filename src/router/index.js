@@ -40,6 +40,24 @@ const routes = [
       required: true,
     }
   },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: () =>
+      import(/* webpackChunkName: "me" */ "../views/Admin.vue"),
+    // meta: {
+    //   required: true,
+    // }
+  },
+  {
+    path: "/admin/users",
+    name: "AdminUser",
+    component: () =>
+      import(/* webpackChunkName: "me" */ "../views/AdminUser.vue"),
+    // meta: {
+    //   required: true,
+    // }
+  },
 ];
 
 const router = new VueRouter({

@@ -1,40 +1,36 @@
 <template>
   <div id="app">
-    <the-header />
-    <router-view />
-    <the-footer/>
-    <the-last-footer/>
+    <router-view v-slot="{ Component }">
+      <transition name="slide">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 <script>
-import TheLastFooter from './components/common/TheLastFooter.vue';
-import TheFooter from './components/common/TheFooter.vue';
-import TheHeader from "./components/common/TheHeader.vue";
-
 export default {
-  components: { TheHeader, TheFooter, TheLastFooter },
   created() {
-    const user = JSON.parse(localStorage.getItem('dataUserLogin'))
-    if (user && user != '') {
-      this.$store.dispatch('actionSetDataUserLogin', user);
+    const user = JSON.parse(localStorage.getItem("dataUserLogin"));
+    if (user && user != "") {
+      this.$store.dispatch("actionSetDataUserLogin", user);
     }
-    const dataRegister = JSON.parse(localStorage.getItem('dataUserRegister'));
-    if (dataRegister && dataRegister != '') {
-      this.$store.dispatch('actionCreateUser', dataRegister); 
+    const dataRegister = JSON.parse(localStorage.getItem("dataUserRegister"));
+    if (dataRegister && dataRegister != "") {
+      this.$store.dispatch("actionCreateUser", dataRegister);
     }
   },
   beforeMount() {
-    const newPassword = JSON.parse(localStorage.getItem('newPassword'));
-    if (newPassword && newPassword != '') {
-      this.$store.dispatch('actionChangePassword', newPassword); 
+    const newPassword = JSON.parse(localStorage.getItem("newPassword"));
+    if (newPassword && newPassword != "") {
+      this.$store.dispatch("actionChangePassword", newPassword);
     }
   },
   mounted() {
-    const infoModifier = JSON.parse(localStorage.getItem('infoModifier'));
-    if (infoModifier && infoModifier != '') {
-      this.$store.dispatch('actionSaveInformation', infoModifier); 
+    const infoModifier = JSON.parse(localStorage.getItem("infoModifier"));
+    if (infoModifier && infoModifier != "") {
+      this.$store.dispatch("actionSaveInformation", infoModifier);
     }
-  }
+  },
 };
 </script>
 
@@ -47,5 +43,34 @@ export default {
   text-align: center;
   color: #2c3e50;
   font-size: 1rem;
+}
+/* Transition Router */
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 2s ease-out;
+}
+
+
+.slide-enter-to {
+  position: absolute;
+  right: 0;
+}
+
+
+.slide-enter-from {
+  position: absolute;
+  right: -100%;
+}
+
+
+.slide-leave-to {
+  position: absolute;
+  left: -100%;
+}
+
+
+.slide-leave-from {
+  position: absolute;
+  left: 0;
 }
 </style>
