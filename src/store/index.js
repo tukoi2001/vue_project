@@ -26,6 +26,12 @@ export default new Vuex.Store({
       Vue.set(state.dataUserLogin, 'lastName', user.lastName);
       Vue.set(state.dataUserLogin, 'phone', user.phone);
       Vue.set(state.dataUserLogin, 'updated_at', user.updated_at);
+      Vue.set(state.usersRegister[0], 'address', user.address);
+      Vue.set(state.usersRegister[0], 'email', user.email);
+      Vue.set(state.usersRegister[0], 'firstName', user.firstName);
+      Vue.set(state.usersRegister[0], 'lastName', user.lastName);
+      Vue.set(state.usersRegister[0], 'phone', user.phone);
+      Vue.set(state.usersRegister[0], 'updated_at', user.updated_at);
     },
     changePassword(state, user) {
       Vue.set(state.usersRegister[0], 'password', user.password);
