@@ -1,0 +1,36 @@
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: 10px;
+    left: 0;
+    width: 0;
+    display: none;
+}
+
+.brand-slider .single-slide img {
+    width: 100%;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.brand-slider {
+    position: relative;
+    padding: 10px 0;
+}
+
+.brand-slider .single-slide {
+    opacity: 0.8;
+}
+
+.brand-slider .single-slide:hover {
+    opacity: 1;
+}

@@ -8,6 +8,7 @@
     <best-seller/>
     <home-background-blogs />
     <home-latest-blogs />
+    <home-brand />
     <scroll-top-arrow/>
   </div>
 </template>
@@ -17,11 +18,12 @@ import Slider from "../components/home/Slider.vue";
 import MainProductCategories from "../components/home/product-categories/MainProductCategories.vue"
 import HomeFeaturesSection from '../components/home/feature/HomeFeaturesSection.vue';
 import HomeBackgroundSale from '../components/home/feature/HomeBackgroundSale.vue';
-import HomeBackgroundBlogs from '../components/blogs/HomeBackgroundBlogs.vue';
-import HomeLatestBlogs from '../components/blogs/HomeLatestBlogs.vue';
+import HomeBackgroundBlogs from '../components/home/blogs/HomeBackgroundBlogs.vue';
+import HomeLatestBlogs from '../components/home/blogs/HomeLatestBlogs.vue';
 import MainSpecialOffer from '../components/home/special-offer/MainSpecialOffer.vue';
 import BestSeller from '../components/home/best-seller/BestSeller.vue';
 import ScrollTopArrow from '../components/common/ScrollTopArrow.vue';
+import HomeBrand from '../components/home/Brand/HomeBrand.vue';
 export default {
   name: "Home",
   components: {
@@ -33,7 +35,8 @@ export default {
     HomeLatestBlogs,
     MainSpecialOffer,
     BestSeller,
-    ScrollTopArrow
+    ScrollTopArrow,
+    HomeBrand
   },
 };
 </script>
