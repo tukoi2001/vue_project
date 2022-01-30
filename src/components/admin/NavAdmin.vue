@@ -61,7 +61,7 @@
         >
       </li>
       <li>
-        <a href=""
+        <a href="" @click.prevent="logout()"
           ><b-icon class="icon-icon" icon="box-arrow-in-right"></b-icon>
           Logout</a
         >
@@ -73,6 +73,13 @@
 <script>
 export default {
   name: "NavAdmin",
+  methods: {
+    logout() {
+      localStorage.setItem('dataAdminLogin', '');
+      this.$store.dispatch('actionSetDataAdminLogin', '');
+      this.$router.push('/login');
+    }
+  }
 };
 </script>
 
