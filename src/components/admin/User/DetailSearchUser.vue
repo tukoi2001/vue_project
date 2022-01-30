@@ -4,7 +4,7 @@
         <div class="close" @click="hideFailSearch()">
             <b-icon class="close-icon" icon="x-square-fill"></b-icon>
         </div>
-      <h3 class="title text-start p-3">Search result:</h3>
+      <h3 class="title text-start p-3">{{ title }}</h3>
       <div class="content-search text-start p-3">
         <p>First Name: <strong>{{ firstName }}</strong></p>
         <p>Last Name: <strong>{{ lastName }}</strong></p>
@@ -27,6 +27,10 @@
 export default {
   name: "DetailSearchUser",
   props: {
+      title: {
+        type: String,
+        default: ""
+      },
       firstName: { 
           type: String,
           default: ""

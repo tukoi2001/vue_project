@@ -3,8 +3,8 @@
     <input
       type="text"
       class="form-control"
-      placeholder="Search..."
-      aria-label="Search..."
+      placeholder="Search by email..."
+      aria-label="Search by email..."
       v-model="title"
       @keyup.enter="searchUser()"
     /><button type="button" class="btn btn-primary" @click="searchUser()">
@@ -13,6 +13,7 @@
     <transition name="fade">
       <detail-search-user
         v-if="dataSearch !== '' && successSearch"
+        :title="'Search result: '"
         :firstName="dataSearch[0].firstName"
         :lastName="dataSearch[0].lastName"
         :phone="dataSearch[0].phone"

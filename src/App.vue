@@ -26,6 +26,10 @@ export default {
     }
   },
   mounted() {
+    const admin = JSON.parse(localStorage.getItem("dataAdminLogin"));
+    if (admin && admin != "") {
+      this.$store.dispatch("actionSetDataAdminLogin", admin);
+    }
     const infoModifier = JSON.parse(localStorage.getItem("infoModifier"));
     if (infoModifier && infoModifier != "") {
       this.$store.dispatch("actionSaveInformation", infoModifier);

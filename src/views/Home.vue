@@ -42,7 +42,7 @@ export default {
     MainSpecialOffer,
     BestSeller,
     ScrollTopArrow,
-    HomeBrand
+    HomeBrand,
     TheHeader,
     TheFooter,
     TheLastFooter

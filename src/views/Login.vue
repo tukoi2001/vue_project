@@ -132,26 +132,34 @@ export default {
     login() {
       const res = this.$store.state.users.users;
       const response = this.$store.state.usersRegister;
-      let result = false;
       res.forEach(user => {
         if (this.userForm.email === user.email && this.userForm.password === user.password) {
-          result = true;
-          localStorage.setItem('dataUserLogin', JSON.stringify(user));
-          this.$store.dispatch('actionSetDataUserLogin', user);
+         
+          if (user.role === 'admin') {
+            localStorage.setItem('dataAdminLogin', JSON.stringify(user));
+            this.$store.dispatch('actionSetDataAdminLogin', user);
+            this.$router.push('/admin');
+          }
+          else {  
+            localStorage.setItem('dataUserLogin', JSON.stringify(user));
+            this.$store.dispatch('actionSetDataUserLogin', user);
+            this.$router.push("/");            
+          }
+        }
+        else {  
+          this.loginFail = true;
         }
       })
       response.forEach(user => {
         if (this.userForm.email === user.email && this.userForm.password === user.password) {
-          result = true;
           localStorage.setItem('dataUserLogin', JSON.stringify(user));
           this.$store.dispatch('actionSetDataUserLogin', user);
+          this.$router.push('/');
+        } else {
+          this.loginFail = true;
         }
       })
-      if(result === true) {
-        this.$router.push("/");
-      } else {
-        this.loginFail = true;
-      }
+       
     }
   },
   watch: { 

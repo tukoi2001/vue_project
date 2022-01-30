@@ -9,11 +9,15 @@ export default new Vuex.Store({
     dataRegisterUser: {},
     users: dataUsers,
     dataUserLogin: null,
-    usersRegister: []
+    usersRegister: [],
+    dataAdminLogin: null,
   },
   mutations: {
     setDataUserLogin(state, user) {
       state.dataUserLogin = user;
+    },
+    setDataAdminLogin(state, user) {
+      state.dataAdminLogin = user;
     },
     createUser(state, user) {
       state.dataRegisterUser = user;
@@ -41,6 +45,9 @@ export default new Vuex.Store({
   actions: {
     actionSetDataUserLogin({ commit }, user) {
       commit("setDataUserLogin", user); 
+    },
+    actionSetDataAdminLogin({ commit }, user) {
+      commit("setDataAdminLogin", user); 
     },
     actionCreateUser(context, user) {
       context.commit("createUser", user);
