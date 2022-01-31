@@ -1,7 +1,7 @@
 <template>
   <div>
     <header-admin />
-    <div class="container-fluid">
+    <div class="container-fluid content">
       <div class="row">
         <div class="col-sm-2 sidebar">
           <nav-admin/>
