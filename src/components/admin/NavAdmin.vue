@@ -3,13 +3,13 @@
     <div class="profile-sidebar">
       <div class="profile-userpic">
         <img
-          src="http://placehold.it/50/30a5ff/fff"
+          :src="require(`@/assets/images/admin/${getDataAdmin.avatar}`)"
           class="img-responsive"
           alt=""
         />
       </div>
       <div class="profile-usertitle">
-        <div class="profile-usertitle-name">Username</div>
+        <div class="profile-usertitle-name">{{ getDataAdmin.firstName + ' ' + getDataAdmin.lastName }}</div>
         <div class="profile-usertitle-status">
           <span class="indicator label-success"></span>Online
         </div>
@@ -78,6 +78,11 @@ export default {
       localStorage.setItem('dataAdminLogin', '');
       this.$store.dispatch('actionSetDataAdminLogin', '');
       this.$router.push('/login');
+    },
+  },
+  computed: {
+    getDataAdmin() {
+      return this.$store.state.dataAdminLogin;
     }
   }
 };

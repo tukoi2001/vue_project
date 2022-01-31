@@ -27,8 +27,21 @@
           <td>{{ item.role }}</td>
           <td>{{ item.purchase_status === 0 ? 'True': 'False' }}</td>
           <td>
-            <button type="button" class="btn btn-primary">Lock</button>
-            <button type="button" class="btn btn-primary ms-2">Details</button>
+            <button type="button" class="btn btn-primary ms-2" @click="getDataDetail(item.id)">Details</button>
+           <detail-search-user
+              v-if="detailUser !== '' && isUser"
+              :title="'Detail User: '"
+              :firstName="detailUser[0].firstName"
+              :lastName="detailUser[0].lastName"
+              :phone="detailUser[0].phone"
+              :address="detailUser[0].address"
+              :email="detailUser[0].email"
+              :role="detailUser[0].role"
+              :purchase_status="detailUser[0].purchase_status"
+              :created_at="detailUser[0].created_at"
+              :updated_at="detailUser[0].updated_at"
+              @myEvent="hideSuccessSearch()"
+            />
           </td>
         </tr>
       </tbody>
@@ -37,17 +50,31 @@
 </template>
 
 <script>
+import DetailSearchUser from './DetailSearchUser.vue';
 export default {
+  components: { DetailSearchUser },
   name: "NewUsers",
   data() {
     return {
       currentUsers: [],
+      detailUser: "",
+      isUser: false,
     };
   },
   created() {
     this.currentUsers = this.$store.state.usersRegister;
-    console.log(this.currentUsers);
   },
+  methods: {
+    getDataDetail(index) {
+      const res = this.$store.state.usersRegister;
+      const result = res.filter((user) => user.id === index);
+      this.detailUser = result;
+      this.isUser = true;
+    },
+    hideSuccessSearch() {
+      this.isUser = false;
+    },
+  }
 };
 </script>
 
