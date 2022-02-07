@@ -39,8 +39,8 @@
         >
       </li>
       <li>
-        <a href=""
-          ><b-icon class="icon-icon" icon="tags-fill"></b-icon> Categories</a
+        <router-link to="/admin/categories"
+          ><b-icon class="icon-icon" icon="tags-fill"></b-icon> Categories</router-link
         >
       </li>
       <li>

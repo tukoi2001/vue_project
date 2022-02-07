@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import dataUsers from "../data/users.json";
+import dataCategories from "../data/categories.json";
 
 Vue.use(Vuex);
 
@@ -11,6 +12,9 @@ export default new Vuex.Store({
     dataUserLogin: null,
     usersRegister: [],
     dataAdminLogin: null,
+    categories: dataCategories,
+    newCategories: [],
+    category: {}
   },
   mutations: {
     setDataUserLogin(state, user) {
@@ -40,6 +44,19 @@ export default new Vuex.Store({
     changePassword(state, user) {
       Vue.set(state.usersRegister[0], 'password', user.password);
       Vue.set(state.usersRegister[0], 'confirmPassword', user.confirmPassword);
+    },
+    changeImgAdmin(state, img) {
+      Vue.set(state.dataAdminLogin, 'avatar', img);
+    },
+    addDataCategory(state, data) {
+      state.category = {
+        id: data.id,
+        name: data.name,
+        slug: data.slug,
+        image: data.image,
+        description: data.description,
+      };
+      state.newCategories.push(state.category);
     }
   },
   actions: {

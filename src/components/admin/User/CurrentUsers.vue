@@ -127,7 +127,7 @@ td {
 }
 nav {
   display: flex !important;
-  justify-content: flex-end;
+  justify-content: center;
 }
 ul {
   margin: 0;

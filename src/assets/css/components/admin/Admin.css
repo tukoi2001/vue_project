@@ -6,6 +6,7 @@ p {
   position: fixed;
   width: 100%;
   height: auto;
+  z-index: 2;
 }
 a,
 a:hover,
@@ -14,6 +15,8 @@ a:focus {
 }
 .content {
   margin-top: 76px;
+  position: relative;
+  z-index: 1;
 }
 h1,
 h2,
