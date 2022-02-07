@@ -34,6 +34,10 @@ export default {
     if (infoModifier && infoModifier != "") {
       this.$store.dispatch("actionSaveInformation", infoModifier);
     }
+    const dataCategory = JSON.parse(localStorage.getItem("categories"));
+    if (dataCategory && dataCategory != "") {
+      this.$store.commit('pushDataCategories', dataCategory);
+    }
   },
 };
 </script>
