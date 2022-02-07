@@ -92,6 +92,13 @@ export default {
           value: 1,
           price: "395.00",
         },
+        {
+          id: 3,
+          image: require("@/assets/images/products/kinh-te/bao-cao-tai-chinh-duoi-goc-nhin-cua-warren-buffett-tai-ban/bao-cao-tai-chinh-duoi-goc-nhin-cua-warren-buffett-tai-ban_1.jpg"),
+          title: "Rinosin Glasses",
+          value: 1,
+          price: "395.00",
+        },
       ],
     };
   },
@@ -109,7 +116,7 @@ export default {
       }
     },
     clearAllItems() {
-        this.listProducts.splice(0, this.listProducts.length);
+        this.listProducts.splice(0, this.listProducts.length); 
     }
   },
 };
