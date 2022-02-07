@@ -89,6 +89,7 @@
               </router-link>
             </div>
           </form>
+          <back-to-home/>
         </div>
       </div>
     </div>
@@ -97,8 +98,10 @@
 
 <script>
 import { required, email, minLength } from "vuelidate/lib/validators";
+import BackToHome from '../components/common/BackToHome.vue';
 
 export default {
+  components: { BackToHome },
   name: "Login",
   data() {
     return {

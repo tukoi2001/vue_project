@@ -31,6 +31,10 @@
         </div>
       </div>
     </div>
+    <home-brand />
+    <scroll-top-arrow/>
+    <the-footer/>
+    <the-last-footer/>
   </div>
 </template>
 
@@ -42,6 +46,10 @@ import MeChangePassword from "../components/me/MeChangePassword.vue";
 import MeDashboard from "../components/me/MeDashboard.vue";
 import MeNav from "../components/me/MeNav.vue";
 import MeOrders from "../components/me/MeOrders.vue";
+import TheFooter from '../components/common/TheFooter.vue';
+import TheLastFooter from '../components/common/TheLastFooter.vue';
+import ScrollTopArrow from '../components/common/ScrollTopArrow.vue';
+import HomeBrand from '../components/home/Brand/HomeBrand.vue';
 export default {
   components: {
     BreadCrumbs,
@@ -50,7 +58,11 @@ export default {
     MeOrders,
     MeChangePassword,
     MeAccountDetails,
-    TheHeader
+    TheHeader,
+    ScrollTopArrow,
+    HomeBrand,
+    TheFooter,
+    TheLastFooter
   },
   name: "Me",
   data() {
