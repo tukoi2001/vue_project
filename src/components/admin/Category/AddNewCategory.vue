@@ -40,12 +40,7 @@
 
       <div class="mb-4">
         <label for="file" class="form-label"></label>
-        <input
-          type="file"
-          class="form-control"
-          for="file"
-          ref="image"
-        />
+        <input type="file" class="form-control" for="file" ref="image" />
       </div>
       <div class="mb-3">
         <label for="description" class="form-label">Description: </label>
@@ -67,41 +62,54 @@ export default {
   data() {
     return {
       dataCategory: {
-        id: '',
-        name: '',
-        slug: '',
-        image: '',
-        description: '',
+        id: "",
+        name: "",
+        slug: "",
+        image: "",
+        description: "",
       },
-      listCategories: []
-    }
+      listCategories: [],
+    };
   },
   methods: {
     addCategory() {
       const path = this.$refs.image.value;
       const newPath = path.split("\\");
       this.dataCategory.image = newPath[newPath.length - 1];
-      this.listCategories.push({ 
-        id: this.dataCategory.id,
-        name: this.dataCategory.name,
-        slug: this.dataCategory.slug,
-        image: this.dataCategory.image,
-        description: this.dataCategory.description,
-      });
-      this.$store.commit('addDataCategory', this.dataCategory);
-      localStorage.setItem('categories', JSON.stringify(this.listCategories));
-    }
-  }
+      if (this.dataCategory.id !== "" && this.dataCategory.name !== "" && this.dataCategory.slug !== "" && this.dataCategory.description !== "" && this.dataCategory.image !== "") {
+        this.listCategories.push({
+          id: this.dataCategory.id,
+          name: this.dataCategory.name,
+          slug: this.dataCategory.slug,
+          image: this.dataCategory.image,
+          description: this.dataCategory.description,
+        });
+        this.$store.commit("addDataCategory", this.dataCategory);
+        localStorage.setItem("categories", JSON.stringify(this.listCategories));
+        this.reset();
+        alert("Add Category Successful!");
+      } else {
+        alert('Please! Enter information before adding!')
+      }
+    },
+    reset() {
+      this.dataCategory.id = "";
+      this.dataCategory.name = "";
+      this.dataCategory.slug = "";
+      this.$refs.image.value = "";
+      this.dataCategory.description = "";
+    },
+  },
 };
 </script>
 
 <style scoped>
 .btn-primary {
-    background-color: #62ab00;
-    border-color: #62ab00;
-    transition: all 0.3s ease-in-out;
+  background-color: #62ab00;
+  border-color: #62ab00;
+  transition: all 0.3s ease-in-out;
 }
 .btn-primary:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 </style>

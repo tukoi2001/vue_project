@@ -57,6 +57,9 @@ export default new Vuex.Store({
         description: data.description,
       };
       state.newCategories.push(state.category);
+    },
+    pushDataCategories(state, data) {
+      state.newCategories = data;
     }
   },
   actions: {
