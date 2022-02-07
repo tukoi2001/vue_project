@@ -1,0 +1,121 @@
+.cart-table {
+    color: #d4d4d4;
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.cart-table .table {
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+table {
+    border-collapse: collapse;
+}
+.cart-table .table thead {
+    background-color: transparent;
+}
+.cart-table .table thead tr {
+    border-bottom: 1px solid #e5e5e5;
+}
+.cart-table .table thead tr th {
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #333;
+    border-right: 1px solid #e5e5e5;
+    padding: 20px 10px;
+    font-size: 15px;
+}
+.cart-table th.pro-thumbnail, .cart-table td.pro-thumbnail {
+    max-width: 160px;
+    min-width: 32px;
+    width: 160px;
+}
+.cart-table th.pro-title, .cart-table td.pro-title {
+    min-width: 200px;
+}
+.cart-table .table tbody {
+    color: #333;
+    font-weight: 500;
+}
+.cart-table td.pro-quantity .pro-qty {
+    width: 50px;
+    display: block;
+    margin: auto;
+}
+.count-input-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.cart-table td.pro-quantity .pro-qty input {
+    padding-right: 0;
+    font-size: 15px;
+    border-radius: 0;
+    background: transparent;
+    border: 1px solid #e5e5e5;
+    color: #333;
+}
+.count-input-block input {
+    -webkit-appearance: textfield !important;
+    -moz-appearance: textfield !important;
+    appearance: textfield !important;
+    color: #414141;
+    background-color: white;
+    height: 44px;
+    padding: 2.8px 8px;
+    width: 48px;
+    border-radius: 0;
+    text-align: center;
+}
+.cart-table td.pro-price span {
+    display: block;
+    font-size: 15px;
+}
+.cart-table .table tbody tr td {
+    text-align: center;
+    border: none;
+    padding: 20px 10px;
+    vertical-align: middle;
+    border-top: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+tr a {
+    text-decoration: none;
+    color: #414141;
+    transition: all 0.3s;
+}
+.table-icon {
+    width: 25px;
+    height: 25px;
+    transition: all 0.4s;
+}
+.table-icon:hover {
+    color: #62ab00;
+}
+tr a:hover {
+    color: #62ab00;
+}
+.cart-table td.pro-thumbnail a {
+    display: block;
+}
+.cart-table td.pro-thumbnail a img {
+    width: 70px;
+    background-color: #f6f7f8;
+    max-width: 100%;
+}
+.form-control:focus {
+    background-color: #fff;
+    border-color: #62ab00!important;
+    outline: 0;
+    box-shadow: none!important;
+}
