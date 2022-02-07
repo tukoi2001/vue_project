@@ -119,3 +119,17 @@ tr a:hover {
     outline: 0;
     box-shadow: none!important;
 }
+.last-row {
+    padding: 10px 10px!important;
+}
+.btn {
+    margin-left: 37px;
+    background-color: #62ab00;
+    color: #fff;
+    border: none;
+    outline: none;
+    transition: all 0.4s ease-in-out;
+}
+.btn:hover {
+    opacity: 0.7;
+}
