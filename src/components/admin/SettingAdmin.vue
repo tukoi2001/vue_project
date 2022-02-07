@@ -2,15 +2,15 @@
   <div class="setting">
     <ul>
       <li>
-        <a href="">
+        <router-link to="/admin/my-profile">
           <b-icon class="icon" icon="person-fill"></b-icon>View Profile
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href=""> <b-icon class="icon" icon="gear-fill"></b-icon>Setting </a>
+        <router-link to="/admin/notification"> <b-icon class="icon" icon="gear-fill"></b-icon>Notifications </router-link>
       </li>
       <li>
-        <a href="">
+        <a href="" @click.prevent="logout()">
           <b-icon class="icon" icon="box-arrow-right"></b-icon>Logout
         </a>
       </li>
@@ -21,6 +21,13 @@
 <script>
 export default {
   name: "SettingAdmin",
+  methods: {
+    logout() {
+      localStorage.setItem('dataAdminLogin', '');
+      this.$store.dispatch('actionSetDataAdminLogin', '');
+      this.$router.push('/login');
+    },
+  },
 };
 </script>
 
@@ -28,6 +35,7 @@ export default {
 ul {
   padding: 10px 5px;
   list-style: none;
+  width: 200px;
 }
 li {
   padding: 7px 10px;

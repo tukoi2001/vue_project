@@ -45,18 +45,45 @@ const routes = [
     name: "Admin",
     component: () =>
       import(/* webpackChunkName: "me" */ "../views/Admin.vue"),
-    // meta: {
-    //   required: true,
-    // }
+    meta: {
+      requiresAuth: true,
+    }
   },
   {
     path: "/admin/users",
     name: "AdminUser",
     component: () =>
       import(/* webpackChunkName: "me" */ "../views/AdminUser.vue"),
-    // meta: {
-    //   required: true,
-    // }
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: "/admin/my-profile",
+    name: "AdminDetail",
+    component: () =>
+      import(/* webpackChunkName: "me" */ "../views/AdminDetail.vue"),
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: "/admin/notification",
+    name: "NotificationsAdmin",
+    component: () =>
+      import(/* webpackChunkName: "me" */ "../views/NotificationsAdmin.vue"),
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: "/admin/categories",
+    name: "AdminCategories",
+    component: () =>
+      import(/* webpackChunkName: "me" */ "../views/AdminCategories.vue"),
+    meta: {
+      requiresAuth: true,
+    }
   },
 ];
 
@@ -99,6 +126,17 @@ router.beforeEach((to, from, next) => {
   }
   else {
     next();
+  }
+
+  if (to.meta && to.meta.requiresAuth) {
+    const authAdmin = localStorage.getItem('dataAdminLogin');
+    if(authAdmin && authAdmin !== '') {
+      next();
+    }
+    else {
+      alert("Bạn cần đăng nhập để sử dụng chức năng này!");
+      next({path: '/login'});
+    }
   }
 })
 export default router;
