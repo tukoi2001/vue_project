@@ -20,6 +20,15 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
+    path: "/contact",
+    name: "Contact",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Contact.vue"),
+  },
+  {
     path: "/login",
     name: "Login",
     component: () =>
@@ -92,15 +101,9 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
   scrollBehavior(to) {
-    if(to.fullPath === '/login') {
+    if(to.fullPath === '/register') {
       return {
-        x: 0, y: 180,
-        behavior:'smooth',      
-      }
-    }
-    else if( to.fullPath === '/register') {
-      return {
-        x: 0, y: 263,
+        x: 0, y: 57,
         behavior:'smooth',      
       }
     }

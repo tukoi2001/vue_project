@@ -159,6 +159,7 @@
               </router-link>
             </div>
           </form>
+          <back-to-home/>
         </div>
       </div>
     </div>
@@ -172,9 +173,10 @@
 
 <script>
 import { required, email, minLength, sameAs } from "vuelidate/lib/validators";
+import BackToHome from '../components/common/BackToHome.vue';
 import Popup from '../components/common/Popup.vue';
 export default {
-  components: { Popup },
+  components: { Popup, BackToHome },
   name: "Register",
   data() { 
     return {

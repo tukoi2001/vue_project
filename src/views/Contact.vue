@@ -1,8 +1,9 @@
 <template>
   <div>
     <the-header />
-    <bread-crumbs :title="'About'" />
-    
+    <bread-crumbs :title="'Contact'" />
+    <contact-map/>
+    <main-contact/>
     <home-brand />
     <scroll-top-arrow />
     <the-footer />
@@ -17,9 +18,11 @@ import TheFooter from "../components/common/TheFooter.vue";
 import TheLastFooter from "../components/common/TheLastFooter.vue";
 import ScrollTopArrow from "../components/common/ScrollTopArrow.vue";
 import HomeBrand from "../components/home/Brand/HomeBrand.vue";
+import ContactMap from '../components/contact/ContactMap.vue';
+import MainContact from '../components/contact/MainContact.vue';
 
 export default {
-  name: "About",
+  name: "Contact",
   components: {
     BreadCrumbs,
     TheHeader,
@@ -27,6 +30,8 @@ export default {
     HomeBrand,
     TheFooter,
     TheLastFooter,
+    ContactMap,
+    MainContact,
   },
 };
 </script>
