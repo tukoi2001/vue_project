@@ -12,10 +12,10 @@
       </transition>
       </a>      
     </div>
-    <a href="" class="nav__icon">
+    <router-link to="/wishlist" class="nav__icon">
       <b-icon class="" icon="suit-heart"></b-icon>
       <span>Wishlist</span>
-    </a>
+    </router-link>
     <a href="" class="nav__icon">
       <b-icon class="" icon="cart-check"></b-icon>
       <span>Shopping Cart</span>
