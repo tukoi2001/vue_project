@@ -19,14 +19,18 @@
     <a href="" class="nav__icon">
       <b-icon class="" icon="cart-check"></b-icon>
       <span>Shopping Cart</span>
+      <transition name="slide-fade">
+          <cart-overview/>
+      </transition>
     </a>
   </div>
 </template>
 
 <script>
+import CartOverview from './CartOverview.vue';
 import HeaderMenu from './HeaderMenu.vue';
 export default {
-  components: { HeaderMenu },
+  components: { HeaderMenu, CartOverview },
   name: "HeaderIcon",
   data() {
     return {
