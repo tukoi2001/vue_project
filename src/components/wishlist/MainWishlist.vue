@@ -109,11 +109,8 @@ export default {
       return result;
     },
     deleteProduct(index) {
-      if (this.listProducts.length === 1) {
-        this.listProducts.splice(0, 1);
-      } else {
-        this.listProducts.splice(index, 1);
-      }
+       const resIndex = this.listProducts.findIndex(res => res.id === index);
+        this.listProducts.splice(resIndex, 1);
     },
     clearAllItems() {
         this.listProducts.splice(0, this.listProducts.length); 
