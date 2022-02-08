@@ -16,11 +16,13 @@
       <b-icon class="" icon="suit-heart"></b-icon>
       <span>Wishlist</span>
     </router-link>
-    <a href="" class="nav__icon">
+    <a href="" class="nav__icon" @click.prevent="showCart = !showCart">
       <b-icon class="" icon="cart-check"></b-icon>
       <span>Shopping Cart</span>
-      <transition name="slide-fade">
-          <cart-overview/>
+      <transition name="fade">
+          <div v-if="showCart">
+            <cart-overview/>
+          </div>
       </transition>
     </a>
   </div>
@@ -35,6 +37,7 @@ export default {
   data() {
     return {
       showTab: false,
+      showCart: false,
     };
   },
   methods: {
