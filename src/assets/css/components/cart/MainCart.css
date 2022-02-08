@@ -1,0 +1,268 @@
+.cart_area .page-section-title {
+    margin-bottom: 40px;
+}
+.cart_area .page-section-title h1 {
+    font-size: 33px;
+}
+.cart-table {
+    color: #d4d4d4;
+}
+.mb--40 {
+    margin-bottom: 40px !important;
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.cart-table .table {
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cart-table .table thead {
+    background-color: transparent;
+}
+.cart-table .table thead tr {
+    border-bottom: 1px solid #e5e5e5;
+}
+.cart-table .table thead tr th {
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #333;
+    border-right: 1px solid #e5e5e5;
+    padding: 20px 10px;
+    font-size: 15px;
+}
+.cart-table th.pro-thumbnail, .cart-table td.pro-thumbnail {
+    max-width: 160px;
+    min-width: 32px;
+    width: 160px;
+}
+.cart-table th.pro-title, .cart-table td.pro-title {
+    min-width: 200px;
+}
+.cart-table .table tbody {
+    color: #333;
+    font-weight: 500;
+}
+.cart-table .table tbody tr {
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+.cart-table .table tbody tr td {
+    text-align: center;
+    border: none;
+    padding: 20px 10px;
+    vertical-align: middle;
+    border-top: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+.cart-table td.pro-remove a {
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.4s ease-in-out;
+}
+.cart-table td.pro-thumbnail a {
+    display: block;
+}
+.cart-table td.pro-thumbnail a img {
+    width: 70px;
+    background-color: #f6f7f8;
+    max-width: 100%;
+}
+.cart-table td.pro-title a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.4s ease-in;
+}
+.cart-table td.pro-price span {
+    display: block;
+    font-size: 15px;
+}
+.cart-table td.pro-quantity .pro-qty {
+    width: 50px;
+    display: block;
+    margin: auto;
+}
+.count-input-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.cart-table td.pro-quantity .pro-qty input {
+    padding-right: 0;
+    font-size: 15px;
+    border-radius: 0;
+    background: transparent;
+    border: 1px solid #e5e5e5;
+    color: #333;
+}
+.count-input-block input {
+    -webkit-appearance: textfield !important;
+    -moz-appearance: textfield !important;
+    appearance: textfield !important;
+    color: #414141;
+    background-color: white;
+    height: 44px;
+    padding: 2.8px 8px;
+    width: 48px;
+    border-radius: 0;
+    text-align: center;
+}
+.cart-table td.pro-subtotal span {
+    display: block;
+    font-size: 15px;
+}
+.cart-table .table tbody tr td .coupon-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid #e5e5e5;
+    margin: 0 0 20px;
+    padding: 25px !important;
+    -ms-flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cart-table .table tbody tr td .coupon-block label {
+    display: none;
+}
+.cart-table .table tbody tr td .coupon-block .coupon-text input {
+    border: 1px solid #e5e5e5;
+    height: 50px;
+    line-height: 48px;
+    padding: 6px 6px 5px;
+    background: #f4f4f4;
+    font-weight: 500;
+    width: 100%;
+}
+.cart-table .table tbody tr td .coupon-block .coupon-btn .btn {
+    padding: 0 30px;
+    color: #333;
+    font-weight: 700;
+    transition: all 0.4s ease-in-out;
+}
+.btn-outlined {
+    background: transparent;
+    border: 2px solid #ececec;
+    color: #333;
+}
+.btn {
+    border-radius: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 50px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.cart-summary .cart-summary-wrap {
+    background-color: #fff;
+    padding: 30px 110px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e5e5;
+    color: #333;
+}
+.cart-summary .cart-summary-button {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 110px;
+}
+.cart-summary .cart-summary-button .c-btn.checkout-btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #62ab00;
+    border-color: #62ab00;
+    transition: all 0.4s ease-in;
+}
+.cart-summary .cart-summary-button .c-btn {
+    margin-top: 10px;
+    width: 140px;
+    border-radius: 50px;
+    height: 36px;
+    border: 2px solid #e5e5e5;
+    line-height: initial;
+    padding: 5px 20px;
+    background-color: transparent;
+    margin-left: 20px;
+    float: right;
+    color: #333;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.btn--primary {
+    background: #62ab00;
+    color: #fff !important;
+    text-decoration: none;
+}
+.cart-summary .cart-summary-wrap h4 {
+    font-size: 1.8rem;
+    line-height: 23px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+    display: block;
+    font-weight: 700;
+    margin: 0 0 20px;
+    text-align: left;
+}
+.cart-summary .cart-summary-wrap p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 23px;
+}
+.cart-summary .cart-summary-wrap p span {
+    float: right;
+}
+.text-primary {
+    color: #62ab00 !important;
+}
+.cart-summary .cart-summary-wrap h2 {
+    border-top: 1px solid #ececec;
+    padding-top: 9px;
+    font-size: 1.4rem;
+    line-height: 23px;
+    font-weight: 500;
+    margin: 0;
+}
+.cart-table .table tbody tr td .coupon-block .coupon-btn .btn:hover {
+    color: #fff;
+    border: 2px solid #62ab00;
+    background: #62ab00;
+}
+.cart-summary .cart-summary-button .c-btn.checkout-btn:hover {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+}
+.cart-table td.pro-title a:hover {
+    color: #62ab00;
+}
+.cart-table td.pro-remove a:hover {
+    color: #62ab00;
+}

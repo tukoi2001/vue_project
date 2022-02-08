@@ -19,10 +19,10 @@
       </div>
       <div class="single-cart-block">
         <div class="btn-block">
-          <a href="" class="btn"
-            >View Cart <b-icon class="btn-icon" icon="chevron-right"></b-icon></a>
-          <a href="" class="btn btn--primary"
-            >Check Out <b-icon class="btn-icon" icon="chevron-right"></b-icon></a>
+          <router-link to="/cart" class="btn"
+            >View Cart <b-icon class="btn-icon" icon="chevron-right"></b-icon></router-link>
+          <router-link to="/checkout" class="btn btn--primary"
+            >Check Out <b-icon class="btn-icon" icon="chevron-right"></b-icon></router-link>
         </div>
       </div>
     </div>
