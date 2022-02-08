@@ -1,0 +1,310 @@
+.checkout-cart-total {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 35px 30px;
+}
+.checkout-cart-total .checkout-title {
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 24px;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    width: 100%;
+    font-weight: 700;
+    color: #1a1f2b;
+}
+.checkout-cart-total h4 {
+    line-height: 23px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.checkout-cart-total h4 span {
+    float: right;
+    display: block;
+}
+.checkout-cart-total ul {
+    border-bottom: 1px solid #dfdfdf;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.checkout-cart-total ul li {
+    color: inherit;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+.checkout-cart-total ul li span.left {
+    float: left;
+    width: 70%;
+}
+.checkout-cart-total ul li span {
+    color: inherit;
+    float: right;
+}
+.checkout-cart-total ul li span {
+    color: inherit;
+    float: right;
+}
+.checkout-cart-total p {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #333;
+    padding: 10px 0;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 0;
+}
+.checkout-cart-total p span {
+    float: right;
+}
+.checkout-cart-total h4 {
+    line-height: 23px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.checkout-cart-total h4 span {
+    float: right;
+    display: block;
+}
+.method-notice {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+    margin: 0 0 15px;
+    position: relative;
+    background-color: #f7f6f7;
+    color: #333;
+    border-top: 3px solid #62ab00;
+    list-style: none outside;
+    width: auto;
+    word-wrap: break-word;
+}
+.mt--25 {
+    margin-top: 25px !important;
+}
+.sr-only {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}    
+
+.term-block {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px;
+}
+.checkout-form input[type="checkbox"] {
+    width: auto;
+}
+.checkout-form input {
+    width: 100%;
+    background-color: #f4f4f4;
+    border: 1px solid transparent;
+    border-radius: 0;
+    line-height: 23px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #14191e;
+}
+.place-order {
+    border-radius: 3px;
+    height: 50px;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 6px 20px;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #62ab00;
+    background-color: #62ab00;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+.term-block label {
+    color: #1a1f2b;
+    margin: 0 0 0px 10px; 
+}
+.checkout-title {
+    border-bottom: 1px solid #e6e6e6;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    text-transform: none;
+    width: 100%;
+    color: #1a1f2b;
+    font-size: 33px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.mb--20 {
+    margin-bottom: 20px !important;
+}
+.checkout-form label {
+    color: #1a1f2b;
+    font-family: Rubik, Arial, Helvetica, sans-serif;
+}
+.checkout-form input {
+    width: 100%;
+    background-color: #f4f4f4;
+    border: 1px solid transparent;
+    border-radius: 0;
+    line-height: 23px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #14191e;
+}
+.checkout-form .nice-select {
+    width: 100%;
+    background-color: #f4f4f4;
+    border: 1px solid transparent;
+    border-radius: 0;
+    line-height: 23px;
+    padding: 10px 20px;
+    font-size: 14px;
+    height: 45px;
+    color: #14191e;
+    margin-bottom: 15px;
+}
+.nice-select {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    float: none;
+}
+.nice-select {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #fff;
+    border-radius: 5px;
+    border: solid 1px #e8e8e8;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    height: 42px;
+    line-height: 40px;
+    outline: 0;
+    padding-left: 18px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left!important;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+}
+.checkout-form .nice-select .current {
+    color: #565f69;
+    display: block;
+    line-height: 23px;
+}
+.checkout-form .nice-select .list {
+    width: 100%;
+}
+.nice-select .list {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgb(68 68 68 / 11%);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: scale(.75) translateY(-21px);
+    -ms-transform: scale(.75) translateY(-21px);
+    transform: scale(.75) translateY(-21px);
+    -webkit-transition: all .2s cubic-bezier(.5,0,0,1.25),opacity .15s ease-out;
+    transition: all .2s cubic-bezier(.5,0,0,1.25),opacity .15s ease-out;
+    z-index: 9;
+}
+.nice-select .option.focus, .nice-select .option.selected.focus, .nice-select .option:hover {
+    background-color: #f6f6f6;
+}
+.nice-select .option.selected {
+    font-weight: 700;
+}
+.nice-select .option {
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 40px;
+    list-style: none;
+    min-height: 40px;
+    outline: 0;
+    padding-left: 18px;
+    padding-right: 29px;
+    text-align: left;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+.mt--30 {
+    margin-top: 30px !important;
+}
+.order-note-block label {
+    margin: 0 0 5px;
+    line-height: 2;
+    color: #333;
+}
+.checkout-form label {
+    color: #1a1f2b;
+}
+.order-note-block textarea {
+    height: 100px;
+    line-height: 1.5;
+    padding: 10px;
+    width: 100%;
+    background: #f4f4f4;
+    border: none;
+}
+.place-order:hover {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+}

@@ -2,7 +2,7 @@
   <div>
     <the-header />
     <bread-crumbs :title="'Checkout'" />
-    
+    <main-checkout/>
     <home-brand />
     <scroll-top-arrow />
     <the-footer />
@@ -17,6 +17,7 @@ import TheFooter from "../components/common/TheFooter.vue";
 import TheLastFooter from "../components/common/TheLastFooter.vue";
 import ScrollTopArrow from "../components/common/ScrollTopArrow.vue";
 import HomeBrand from "../components/home/Brand/HomeBrand.vue";
+import MainCheckout from '../components/checkout/MainCheckout.vue';
 
 export default {
   name: "Checkout",
@@ -27,6 +28,7 @@ export default {
     HomeBrand,
     TheFooter,
     TheLastFooter,
+    MainCheckout,
   },
 };
 </script>
