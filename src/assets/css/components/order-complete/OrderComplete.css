@@ -1,0 +1,77 @@
+.order-complete-message h1 {
+    color: #333;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 700;
+}
+.order-complete-message p {
+    font-size: 24px;
+    font-weight: 300;
+}
+.order-details-list {
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 0;
+}
+.order-details-list li {
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+.order-table {
+    margin: 30px 0;
+}
+.order-table-title {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 20px 0;
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.order-details-table {
+    border: 1px solid #e5e5e5;
+    margin: 0;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    font-size: 1.2rem;
+}
+.order-details-table thead tr th {
+    font-weight: 400;
+    color: #333;
+    border: none;
+    border-right: 1px solid #e5e5e5;
+}
+.order-details-table tbody tr td {
+    border-top: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+.table > :not(:first-child) {
+    border-top: none;
+}
+.order-details-table tbody tr td a {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+.order-details-table tbody tr td a:hover {
+    color: #62ab00;
+}
+.color-primary {
+    color: #62ab00;
+    font-weight: bold;
+}
+.back-to-home button {
+    background-color: #62ab00;
+    border-color: #62ab00;
+    transition: all 0.3s ease-in-out;
+}
+.back-to-home button:hover {
+    background-color: #333;
+    border-color: #333;
+}
