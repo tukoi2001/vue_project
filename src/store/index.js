@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import dataUsers from "../data/users.json";
 import dataCategories from "../data/categories.json";
+import dataProducts from "../data/products.json";
 
 Vue.use(Vuex);
 
@@ -13,8 +14,9 @@ export default new Vuex.Store({
     usersRegister: [],
     dataAdminLogin: null,
     categories: dataCategories,
+    listProducts: dataProducts,
     newCategories: [],
-    category: {}
+    category: {},
   },
   mutations: {
     setDataUserLogin(state, user) {
@@ -28,25 +30,25 @@ export default new Vuex.Store({
       state.usersRegister.push(state.dataRegisterUser);
     },
     saveInformation(state, user) {
-      Vue.set(state.dataUserLogin, 'address', user.address);
-      Vue.set(state.dataUserLogin, 'email', user.email);
-      Vue.set(state.dataUserLogin, 'firstName', user.firstName);
-      Vue.set(state.dataUserLogin, 'lastName', user.lastName);
-      Vue.set(state.dataUserLogin, 'phone', user.phone);
-      Vue.set(state.dataUserLogin, 'updated_at', user.updated_at);
-      Vue.set(state.usersRegister[0], 'address', user.address);
-      Vue.set(state.usersRegister[0], 'email', user.email);
-      Vue.set(state.usersRegister[0], 'firstName', user.firstName);
-      Vue.set(state.usersRegister[0], 'lastName', user.lastName);
-      Vue.set(state.usersRegister[0], 'phone', user.phone);
-      Vue.set(state.usersRegister[0], 'updated_at', user.updated_at);
+      Vue.set(state.dataUserLogin, "address", user.address);
+      Vue.set(state.dataUserLogin, "email", user.email);
+      Vue.set(state.dataUserLogin, "firstName", user.firstName);
+      Vue.set(state.dataUserLogin, "lastName", user.lastName);
+      Vue.set(state.dataUserLogin, "phone", user.phone);
+      Vue.set(state.dataUserLogin, "updated_at", user.updated_at);
+      Vue.set(state.usersRegister[0], "address", user.address);
+      Vue.set(state.usersRegister[0], "email", user.email);
+      Vue.set(state.usersRegister[0], "firstName", user.firstName);
+      Vue.set(state.usersRegister[0], "lastName", user.lastName);
+      Vue.set(state.usersRegister[0], "phone", user.phone);
+      Vue.set(state.usersRegister[0], "updated_at", user.updated_at);
     },
     changePassword(state, user) {
-      Vue.set(state.usersRegister[0], 'password', user.password);
-      Vue.set(state.usersRegister[0], 'confirmPassword', user.confirmPassword);
+      Vue.set(state.usersRegister[0], "password", user.password);
+      Vue.set(state.usersRegister[0], "confirmPassword", user.confirmPassword);
     },
     changeImgAdmin(state, img) {
-      Vue.set(state.dataAdminLogin, 'avatar', img);
+      Vue.set(state.dataAdminLogin, "avatar", img);
     },
     addDataCategory(state, data) {
       state.category = {
@@ -60,24 +62,24 @@ export default new Vuex.Store({
     },
     pushDataCategories(state, data) {
       state.newCategories = data;
-    }
+    },
   },
   actions: {
     actionSetDataUserLogin({ commit }, user) {
-      commit("setDataUserLogin", user); 
+      commit("setDataUserLogin", user);
     },
     actionSetDataAdminLogin({ commit }, user) {
-      commit("setDataAdminLogin", user); 
+      commit("setDataAdminLogin", user);
     },
     actionCreateUser(context, user) {
       context.commit("createUser", user);
     },
-    actionSaveInformation({commit}, user) {
-      commit('saveInformation', user)
+    actionSaveInformation({ commit }, user) {
+      commit("saveInformation", user);
     },
-    actionChangePassword({commit}, user) {
-      commit('changePassword', user)
-    }
+    actionChangePassword({ commit }, user) {
+      commit("changePassword", user);
+    },
   },
   modules: {},
 });
