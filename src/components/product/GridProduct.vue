@@ -15,7 +15,7 @@
             />
             <div class="hover-contents">
               <div class="hover-btns">
-                <a href="" class="single-btn">
+                <a href="" class="single-btn" @click.prevent="actionAddItem(item)">
                   <b-icon icon="basket"></b-icon>
                 </a>
                 <a href="" class="single-btn">
@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 export default {
   name: "GridProduct",
   data() {
@@ -55,10 +56,10 @@ export default {
     listProducts: {
       type: Array,
       default: () => [],
-    }
+    } 
   },
    methods: {
-     formatPrice(value) {
+    formatPrice(value) {
     const formatter = new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'VND',
@@ -66,6 +67,9 @@ export default {
     });
     return formatter.format(value);
     },
+    ...mapActions('cart', [
+      'actionAddItem'
+    ])
   },
   mounted() {
     this.listProductsShow = this.listProducts;

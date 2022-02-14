@@ -3,6 +3,8 @@ import Vuex from "vuex";
 import dataUsers from "../data/users.json";
 import dataCategories from "../data/categories.json";
 import dataProducts from "../data/products.json";
+import cart from './modules/cart';
+import checkout from './modules/checkout';
 
 Vue.use(Vuex);
 
@@ -81,5 +83,8 @@ export default new Vuex.Store({
       commit("changePassword", user);
     },
   },
-  modules: {},
+  modules: {
+    cart,
+    checkout
+  },
 });

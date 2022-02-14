@@ -6,7 +6,7 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <form action="" class="">
+          <form action="" @submit.prevent="handleDiscount">
             <div class="cart-table table-responsive mb--40">
               <table class="table">
                 <thead>
@@ -20,15 +20,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="(item, index) in listProducts" :key="index">
+                  <tr v-for="(item, index) in items" :key="index">
                     <td class="pro-thumbnail">
-                      <a href="#"><img :src="item.image" alt="Product" /></a>
+                      <a href="#"><img :src="require(`@/assets/images/products/${item.image}`)" alt="Product" /></a>
                     </td>
                     <td class="pro-title">
-                      <a href="">{{ item.title }} </a>
+                      <a href="">{{ item.name }} </a>
                     </td>
                     <td class="pro-price">
-                      <span>$ {{ item.price }}</span>
+                      <span>{{ formatPrice(item.new_price) }}</span>
                     </td>
                     <td class="pro-quantity">
                       <div class="pro-qty">
@@ -38,23 +38,27 @@
                             class="form-control text-center"
                             min="1"
                             max="50"
-                            v-model="item.value"
+                            v-model="item.qty"
                           />
                         </div>
                       </div>
                     </td>
                     <td class="pro-subtotal">
                       <span
-                        >$ {{ caculatorPrice(item.value, item.price) }}</span
+                        >{{ formatPrice(item.new_price * item.qty) }}</span
                       >
                     </td>
                     <td class="pro-remove">
-                      <a href="" @click.prevent="deleteItem(item.id)"><b-icon icon="trash-fill"></b-icon></a>
+                      <a href="" @click.prevent="actionDeleteItem(item.id)"
+                        ><b-icon icon="trash-fill"></b-icon
+                      ></a>
                     </td>
                   </tr>
-                    <tr v-if="listProducts.length === 0">
-                        <td colspan="6" class="text-danger fw-bold">There is no item in cart!</td>
-                    </tr>
+                  <tr v-if="items.length <= 0">
+                    <td colspan="6" class="text-danger fw-bold">
+                      There is no item in cart!
+                    </td>
+                  </tr>
                   <tr v-else>
                     <td colspan="6" class="actions">
                       <div class="coupon-block">
@@ -72,7 +76,6 @@
                           <button
                             type="submit"
                             class="btn btn-outlined"
-                            @click.prevent="handleDiscount"
                           >
                             Apply Coupon
                           </button>
@@ -84,28 +87,31 @@
                             <h4><span>Cart Summary</span></h4>
                             <p>
                               Sub Total
-                              <span class="text-primary">$ {{ handleSubPrice }}</span>
+                              <span class="text-primary"
+                                >{{ formatPrice(handleSubPrice) }}</span
+                              >
                             </p>
                             <p>
                               Shipping Cost
-                              <span class="text-primary">$ 00.00</span>
+                              <span class="text-primary">{{ formatPrice(0) }}</span>
                             </p>
                             <p>
                               Discount
-                              <span class="text-primary">- $ {{ discount }}</span>
+                              <span class="text-danger"
+                                >- {{ formatPrice(discount) }}</span>
                             </p>
                             <h2 class="fw-bold">
                               Grand Total
                               <span class="text-primary float-end"
-                                >$ {{ handleTotalPrice }}</span
+                                >{{ formatPrice(handleSubPrice - discount) }}</span
                               >
                             </h2>
                           </div>
                           <div class="cart-summary-button">
-                            <router-link
-                              to="/checkout"
+                            <a href=""
+                              @click.prevent="handleCheckout(discount)"
                               class="checkout-btn c-btn btn--primary"
-                              >Checkout</router-link
+                              >Checkout</a
                             >
                           </div>
                         </div>
@@ -123,80 +129,63 @@
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex";
 export default {
   name: "MainCart",
   data() {
     return {
-      listProducts: [
-        {
-          id: 0,
-          image: require("@/assets/images/products/kinh-te/bao-cao-tai-chinh-duoi-goc-nhin-cua-warren-buffett-tai-ban/bao-cao-tai-chinh-duoi-goc-nhin-cua-warren-buffett-tai-ban_1.jpg"),
-          title: "Rinosin Glasses",
-          value: 1,
-          price: "390.00",
-        },
-        {
-          id: 1,
-          image: require("@/assets/images/products/kinh-te/bao-cao-tai-chinh-duoi-goc-nhin-cua-warren-buffett-tai-ban/bao-cao-tai-chinh-duoi-goc-nhin-cua-warren-buffett-tai-ban_1.jpg"),
-          title: "Rinosin Glasses",
-          value: 1,
-          price: "391.00",
-        },
-        {
-          id: 2,
-          image: require("@/assets/images/products/kinh-te/bao-cao-tai-chinh-duoi-goc-nhin-cua-warren-buffett-tai-ban/bao-cao-tai-chinh-duoi-goc-nhin-cua-warren-buffett-tai-ban_1.jpg"),
-          title: "Rinosin Glasses",
-          value: 1,
-          price: "392.00",
-        },
-        {
-          id: 3,
-          image: require("@/assets/images/products/kinh-te/bao-cao-tai-chinh-duoi-goc-nhin-cua-warren-buffett-tai-ban/bao-cao-tai-chinh-duoi-goc-nhin-cua-warren-buffett-tai-ban_1.jpg"),
-          title: "Rinosin Glasses",
-          value: 1,
-          price: "393.00",
-        },
-      ],
-      couponCode: "",
       discount: 0,
+      couponCode: ''
     };
   },
   methods: {
-    caculatorPrice(num, price) {
-      return Number(num) * price;
-    },
     handleDiscount() {
       if (this.couponCode === "genetic") {
-        this.discount = 5.0;
-        alert('Thank you for using the discount code!')
-      }
-      else if (this.couponCode === "") {
-          alert("Enter the discount code!");
-      }
-      else {
-          this.discount = 0;
-          alert("Wrong discount code! Please check again!")
+        this.discount = 5000;
+        alert("Thank you for using the discount code!");
+      } else if (this.couponCode === "") {
+        alert("Enter the discount code!");
+      } else {
+        this.discount = 0;
+        alert("Wrong discount code! Please check again!");
       }
     },
-    deleteItem(index) {
-        const resIndex = this.listProducts.findIndex(res => res.id === index);
-        this.listProducts.splice(resIndex, 1);
+    ...mapActions('cart', [
+      'actionDeleteItem',
+      'actionInitItems',
+      'actionSaveInformation'
+    ]),
+    formatPrice(value) {
+    const formatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'VND',
+      minimumFractionDigits: 0
+    });
+    return formatter.format(value);
+    },
+    handleCheckout(price) {
+      this.actionSaveInformation(price);
+      localStorage.setItem("cartItems", JSON.stringify(this.items));
+      this.$router.push('/checkout');
     }
   },
   computed: {
-      handleSubPrice() {
-          const data = this.listProducts;
-          let result = 0;
-          data.forEach(item => {
-            let total = item.value * item.price;
-            result = result + total;
-          })
-          return result;
-      },
-      handleTotalPrice() {
-        return  this.handleSubPrice - this.discount;
-      }
+    handleSubPrice() {
+      const data = this.items;
+      let result = 0;
+      data.forEach((item) => {
+        let total = item.new_price * item.qty;
+        result = result + total;
+      });
+      return result;
+    },
+    ...mapState('cart', [
+      'items'
+    ])
   },
+  mounted() {
+    this.actionInitItems();
+  }
 };
 </script>
 
