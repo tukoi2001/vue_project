@@ -6,17 +6,11 @@
           <slot name="button"></slot>
         </div>
       </div>
-      <div class="col-xl-4 col-md-4 col-sm-6 mt--10 mt-sm--0">
+      <div class="col-xl-6 col-md-5 col-sm-6 mt--10 mt-sm--0">
         <span class="toolbar-status"> Showing 1 to 9 of 14 (2 Pages) </span>
       </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 mt--10 mt-md--0 section_pp">
-        <div class="sorting-selection">
-          <span>Show:</span>
-          <slot name="view"></slot>
-        </div>
-      </div>
       <div
-        class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mt--10 mt-md--0 section_pp"
+        class="col-xl-4 col-lg-5 col-md-4 col-sm-6 mt--10 mt-md--0 section_pp"
       >
         <div class="sorting-selection">
           <span>Sort By:</span>
