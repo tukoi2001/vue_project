@@ -9,7 +9,6 @@
         >
           <product
             :mainImage="item.mainImage"
-            :hoverImage="item.hoverImage"
             :author="item.author"
             :title="item.title"
             :price="item.price"
@@ -32,7 +31,6 @@ export default {
       listProducts: [
         {
           mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-2.jpg"),
           author: "Cpple",
           title: "3 Ways To Have (A) More Appealing BOOK",
           price: 51.2,
@@ -41,7 +39,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-2.jpg"),
           author: "Cpple",
           title: "3 Ways To Have (A) More Appealing BOOK",
           category: "Men's Watch",
@@ -51,7 +48,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-2.jpg"),
           author: "Cpple",
           title: "3 Ways To Have (A) More Appealing BOOK",
           price: 51.2,
@@ -60,7 +56,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-2.jpg"),
           author: "Cpple",
           title: "3 Ways To Have (A) More Appealing BOOK",
           price: 51.2,
@@ -69,7 +64,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-2.jpg"),
           author: "Cpple",
           title: "3 Ways To Have (A) More Appealing BOOK",
           price: 51.2,
@@ -78,7 +72,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-2.jpg"),
           author: "Cpple",
           title: "3 Ways To Have (A) More Appealing BOOK",
           price: 51.2,
@@ -87,7 +80,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-2.jpg"),
           author: "Cpple",
           title: "3 Ways To Have (A) More Appealing BOOK",
           price: 51.2,
@@ -96,7 +88,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-2.jpg"),
           author: "Cpple",
           title: "3 Ways To Have (A) More Appealing BOOK",
           price: 51.2,
