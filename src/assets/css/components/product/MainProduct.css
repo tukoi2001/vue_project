@@ -51,6 +51,13 @@
   cursor: pointer;
   font-size: 16px;
   color: #333;
+  transition: all .3s ease-in-out;
+}
+.product-view-mode .sorting-btn:hover {
+  color: #62ab00;
+}
+.active {
+  color: #62ab00!important;
 }
 .toolbar-status {
   color: #555;

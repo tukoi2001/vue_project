@@ -23,7 +23,7 @@
       </div>
     </form>
     <ul class="nav menu">
-      <li class="active">
+      <li>
         <router-link to="/admin"
           ><b-icon class="icon-icon" icon="card-list"></b-icon> Dashboard</router-link
         >
@@ -34,8 +34,8 @@
         >
       </li>
       <li>
-        <a href=""
-          ><b-icon class="icon-icon" icon="card-list"></b-icon> Products</a
+        <router-link to="/admin/products"
+          ><b-icon class="icon-icon" icon="card-list"></b-icon> Products</router-link
         >
       </li>
       <li>
@@ -88,4 +88,6 @@ export default {
 };
 </script>
 
-<style scoped src="@/assets/css/components/admin/Admin.css"></style>
+<style scoped src="@/assets/css/components/admin/Admin.css">
+
+</style>
