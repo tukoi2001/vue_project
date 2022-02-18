@@ -9,7 +9,6 @@
         >
           <product
             :mainImage="item.mainImage"
-            :hoverImage="item.hoverImage"
             :author="item.author"
             :title="item.title"
             :price="item.price"
@@ -34,7 +33,6 @@ export default {
       listProducts: [
         {
           mainImage: require("@/assets/images/home/product-categories/product-3/product-11.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-3/product-10.jpg"),
           author: "Gpple",
           title: "Find Out More About BOOK By Social Media?",
           price: 51.2,
@@ -43,7 +41,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3/product-11.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-3/product-10.jpg"),
           author: "Gpple",
           title: "Find Out More About BOOK By Social Media?",
           category: "Men's Watch",
@@ -53,7 +50,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3/product-11.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-3/product-10.jpg"),
           author: "Gpple",
           title: "Find Out More About BOOK By Social Media?",
           price: 51.2,
@@ -62,7 +58,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3/product-11.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-3/product-10.jpg"),
           author: "Gpple",
           title: "Find Out More About BOOK By Social Media?",
           price: 51.2,
@@ -71,7 +66,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3/product-11.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-3/product-10.jpg"),
           author: "Gpple",
           title: "Find Out More About BOOK By Social Media?",
           price: 51.2,
@@ -80,7 +74,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3/product-11.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-3/product-10.jpg"),
           author: "Gpple",
           title: "Find Out More About BOOK By Social Media?",
           price: 51.2,
@@ -89,7 +82,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3/product-11.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-3/product-10.jpg"),
           author: "Gpple",
           title: "Find Out More About BOOK By Social Media?",
           price: 51.2,
@@ -98,7 +90,6 @@ export default {
         },
         {
           mainImage: require("@/assets/images/home/product-categories/product-3/product-11.jpg"),
-          hoverImage: require("@/assets/images/home/product-categories/product-3/product-10.jpg"),
           author: "Gpple",
           title: "Find Out More About BOOK By Social Media?",
           price: 51.2,

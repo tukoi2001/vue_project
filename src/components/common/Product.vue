@@ -10,9 +10,6 @@
       <div class="card-image">
         <img :src="mainImage" alt="" />
         <div class="hover-contents">
-          <a href="" class="hover-image">
-            <img :src="hoverImage" alt="" />
-          </a>
           <div class="hover-btns">
             <a href="" class="single-btn"><b-icon-basket2-fill /></a>
             <a href="" class="single-btn"><b-icon-heart-fill /></a>
@@ -35,10 +32,6 @@ export default {
   name: "Product",
   props: {
     mainImage: {
-      type: String,
-      default: "",
-    },
-    hoverImage: {
       type: String,
       default: "",
     },
