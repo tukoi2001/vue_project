@@ -2,7 +2,7 @@
   <div>
     <the-header />
     <bread-crumbs :title="'Blog'" />
-    
+    <blog-list />
     <home-brand />
     <scroll-top-arrow />
     <the-footer />
@@ -17,6 +17,7 @@ import TheFooter from "../components/common/TheFooter.vue";
 import TheLastFooter from "../components/common/TheLastFooter.vue";
 import ScrollTopArrow from "../components/common/ScrollTopArrow.vue";
 import HomeBrand from "../components/home/Brand/HomeBrand.vue";
+import BlogList from '../components/blog/BlogList.vue';
 
 export default {
   name: "Blog",
@@ -27,6 +28,7 @@ export default {
     HomeBrand,
     TheFooter,
     TheLastFooter,
+    BlogList,
   },
 };
 </script>
