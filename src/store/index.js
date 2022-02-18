@@ -5,6 +5,7 @@ import dataCategories from "../data/categories.json";
 import dataProducts from "../data/products.json";
 import cart from './modules/cart';
 import checkout from './modules/checkout';
+import product from './modules/product';
 
 Vue.use(Vuex);
 
@@ -85,6 +86,7 @@ export default new Vuex.Store({
   },
   modules: {
     cart,
-    checkout
+    checkout,
+    product
   },
 });

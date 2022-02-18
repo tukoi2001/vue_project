@@ -1,9 +1,16 @@
 <template>
   <div>
-    <div class="row pb-4" v-for="(item, index) in listProductsShow" :key="index">
+    <div
+      class="row pb-4"
+      v-for="(item, index) in listProductsShow"
+      :key="index"
+    >
       <div class="col-md-3 p-0">
         <div class="card-image">
-          <img :src="require(`@/assets/images/products/${item.image}`)" alt="" />
+          <img
+            :src="require(`@/assets/images/products/${item.image}`)"
+            alt=""
+          />
         </div>
       </div>
       <div class="col-md-9 text-start">
@@ -33,7 +40,12 @@
               <span><b-icon icon="star"></b-icon></span>
             </div>
             <div class="btn-block">
-              <a href="" class="btn btn-outlined">Add To Cart</a>
+              <a
+                href=""
+                class="btn btn-outlined"
+                @click.prevent="actionAddItem(item)"
+                >Add To Cart</a
+              >
               <a href="" class="card-link"
                 ><b-icon icon="heart-fill"></b-icon> Add To Wishlist</a
               >
@@ -46,6 +58,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "ListProduct",
   data() {
@@ -53,21 +66,22 @@ export default {
       listProductsShow: [],
     };
   },
-  props: { 
+  props: {
     listProducts: {
       type: Array,
       default: () => [],
-    }
+    },
   },
   methods: {
-     formatPrice(value) {
-    const formatter = new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'VND',
-      minimumFractionDigits: 0
-    });
-    return formatter.format(value);
+    formatPrice(value) {
+      const formatter = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "VND",
+        minimumFractionDigits: 0,
+      });
+      return formatter.format(value);
     },
+    ...mapActions("cart", ["actionAddItem"]),
   },
   mounted() {
     this.listProductsShow = this.listProducts;
@@ -75,8 +89,8 @@ export default {
   watch: {
     listProducts() {
       this.listProductsShow = this.listProducts;
-    }
-  }
+    },
+  },
 };
 </script>
 

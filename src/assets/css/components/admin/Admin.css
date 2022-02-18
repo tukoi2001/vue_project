@@ -1547,3 +1547,7 @@ p.back-link {
   font-size: 12px;
   text-transform: uppercase;
 }
+.router-link-exact-active {
+  color: #FFF!important;
+  background-color: #62ab00;
+}

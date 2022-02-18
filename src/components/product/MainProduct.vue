@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col-lg-3 mt--40 mt-lg--0">
         <left-side-bar>
-          <li><a href="" @click.prevent="getAllDataCategories()">Tất cả</a></li>
-          <li v-for="item in listCategories" :key="item.id">
-            <a href="" @click.prevent="getDataProductByCategory(item.id)">{{
+          <li><a href="" @click.prevent="getAllDataCategories()" :class="{'active': active === 0}">Tất cả</a></li>
+          <li v-for="(item, index) in listCategories" :key="index">
+            <a href="" @click.prevent="getDataProductByCategory(item.id)" :class="{'active': active === index + 1}">{{
               item.title
             }}</a>
           </li>
@@ -19,12 +19,14 @@
               @click.prevent="currentTab = 'grid-product'"
               class="sorting-btn"
               data-target="grid"
+              :class="{'active': currentTab === 'grid-product'}"
               ><b-icon class="sorting-icon" icon="grid-3x3-gap-fill"></b-icon
             ></a>
             <a
               href=""
               @click.prevent="currentTab = 'list-product'"
               class="sorting-btn small"
+              :class="{'active': currentTab === 'list-product'}"
               ><b-icon class="sorting-icon large" icon="list-task"></b-icon
             ></a>
           </template>
@@ -64,17 +66,20 @@ export default {
       listProducts: [],
       listCategories: null,
       sortBy: 0,
+      active: 0
     };
   },
   methods: {
     getAllDataCategories() {
       const data = this.$store.state.listProducts.products;
       this.setDataToStore(data);
+      this.active = 0;
     },
     getDataProductByCategory(index) {
       const data = this.$store.state.listProducts.products;
       const result = data.filter((item) => item.category_id == index);
       this.setDataToStore(result);
+      this.active = index;
     },
     setDataToStore(data) {
       this.listProducts = data;

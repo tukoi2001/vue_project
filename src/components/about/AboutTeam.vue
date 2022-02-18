@@ -9,7 +9,7 @@
                 </div>
             </div>
 
-            <div class="row mb-n6">
+            <div class="row mb-n6 justify-content-center">
                 <div class="col-lg-3 col-md-4 col-sm-6" v-for="(item, index) in members" :key="index">
                     <div class="single-team-member text-center mb-6">
                         <div class="team-thumb">
@@ -55,12 +55,6 @@ export default {
                     role: 'Developer',
                     name: 'Võ Hoàng Long',
                     linkFb: 'https://www.facebook.com/longrui.09'
-                },
-                 {
-                    img: require("@/assets/images/about/member4.jpg"),
-                    role: 'Marketing Officer',
-                    name: 'Bùi Đức Trọng',
-                    linkFb: 'https://www.facebook.com/profile.php?id=100013101937048&comment_id=Y29tbWVudDoyOTY0MjM2ODA3MTkzNjE2XzI5NjQ1OTY1OTcxNTc2Mzc%3D'
                 },
             ]
         }
