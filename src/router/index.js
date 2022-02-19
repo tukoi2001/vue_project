@@ -41,6 +41,15 @@ const routes = [
       }
   },
   {
+    path: "/blog-details",
+    name: "BlogDetail",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/BlogDetail.vue"),
+      meta: {
+        title: 'Blog Detail',
+      }
+  },
+  {
     path: "/wishlist",
     name: "WishList",
     component: () =>
@@ -173,6 +182,16 @@ const routes = [
     meta: {
       requiresAuth: true,
       title: 'Admin Products'
+    },
+  },
+  {
+    path: "/admin/orders",
+    name: "AdminOrders",
+    component: () =>
+      import(/* webpackChunkName: "me" */ "../views/AdminOrders.vue"),
+    meta: {
+      requiresAuth: true,
+      title: 'Admin Orders'
     },
   },
 ];

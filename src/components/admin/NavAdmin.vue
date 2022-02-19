@@ -44,8 +44,8 @@
         >
       </li>
       <li>
-        <a href=""
-          ><b-icon class="icon-icon" icon="basket-fill"></b-icon> Orders</a
+        <router-link to="/admin/orders"
+          ><b-icon class="icon-icon" icon="basket-fill"></b-icon> Orders</router-link
         >
       </li>
       <li>
