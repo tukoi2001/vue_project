@@ -1,0 +1,162 @@
+.comment-block-wrapper h3 {
+    display: inline-block;
+    font-size: 17px;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+    color: #333;
+    float: left;
+}
+
+.single-comment {
+    border: 1px solid #ececec;
+    margin: 0 0 20px;
+    padding: 30px 30px 45px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.single-comment .comment-avatar {
+    margin-right: 25px;
+    width: 50px;
+    height: 50px;
+}
+
+.single-comment .comment-text .author {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.single-comment .comment-text .time {
+    color: #333;
+    margin: 0 0 15px;
+    font-size: 0.93em;
+    font-style: italic;
+}
+
+.single-comment .comment-text p {
+    color: #333;
+}
+
+.single-comment .reply-btn {
+    position: absolute;
+    right: 30px;
+    font-weight: 700;
+    color: #62ab00;
+    border: 1px solid #62ab00 !important;
+    position: absolute;
+    font-weight: 700;
+    color: #62ab00;
+    border: 1px solid #62ab00 !important;
+    right: 10px;
+    min-height: 35px;
+}
+
+.reply-btn {
+    font-size: 0.8em;
+    width: 75px;
+    height: 28px;
+    line-height: 26px;
+}
+
+.btn-rounded {
+    border-radius: 500px;
+}
+
+.btn-outlined--primary {
+    background: transparent;
+    border: 2px solid #62ab00 !important;
+    color: #62ab00;
+}
+
+.btn-outlined--primary:hover {
+    background: #62ab00;
+    border-color: #62ab00 !important;
+    color: #fff !important;
+}
+
+.blog-comment {
+    padding: 0 90px;
+}
+
+.replay-form-wrapper {
+    text-align: left;
+}
+
+.replay-form-wrapper h3 {
+    font-size: 17px;
+    margin: 20px 0;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+}
+
+.replay-form-wrapper p {
+    color: #333;
+    font-size: 14px;
+    padding-bottom: 2px;
+}
+
+.replay-form-wrapper {
+    padding: 0 90px
+}
+
+.btn-black {
+    height: 50px;
+    padding: 0 30px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    background: #333;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: Rubik, Arial, Helvetica, sans-serif;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.btn {
+    border-radius: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 50px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.btn-black:hover {
+    background: #62ab00;
+    color: #fff;
+}

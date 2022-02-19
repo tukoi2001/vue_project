@@ -6,7 +6,7 @@
       </a>
       <div class="card-content">
         <h3 class="title">
-          <a href="">{{blogTitle}}</a>
+          <router-link to="/blog-detail"><a href="">{{blogTitle}}</a></router-link>
         </h3>
         <p class="post-meta">
           <span>13/08/2017 </span> | <a href="#">{{author}}</a>
@@ -16,7 +16,7 @@
           <p>
               {{blogParagraph}}
           </p>
-          <a href="" class="blog-link">Read More</a>
+          <router-link to="/blog-detail"><a href="" class="blog-link">Read More</a></router-link>
         </article>
       </div>
     </div>
