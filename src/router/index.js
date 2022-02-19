@@ -194,55 +194,56 @@ const routes = [
       title: 'Admin Orders'
     },
   },
+
 ];
 
 const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes,
-  scrollBehavior(to) {
-    if (to.fullPath === "/register") {
-      return {
-        x: 0,
-        y: 57,
-        behavior: "smooth",
-      };
-    } else {
-      return {
-        x: 0,
-        y: 0,
-        behavior: "smooth",
-      };
-    }
-  },
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes,
+    scrollBehavior(to) {
+        if (to.fullPath === "/register") {
+            return {
+                x: 0,
+                y: 57,
+                behavior: "smooth",
+            };
+        } else {
+            return {
+                x: 0,
+                y: 0,
+                behavior: "smooth",
+            };
+        }
+    },
 });
 
 router.beforeEach((to, from, next) => {
-  document.title = `Pustok | ${to.meta.title}`;
-  next();
-});
-
-router.beforeEach((to, from, next) => {
-  if (to.meta && to.meta.required) {
-    const auth = localStorage.getItem("dataUserLogin");
-    if (auth && auth !== "") {
-      next();
-    } else {
-      alert("Bạn cần đăng nhập để sử dụng chức năng này!");
-      next({ path: "/login" });
-    }
-  } else {
+    document.title = `Pustok | ${to.meta.title}`;
     next();
-  }
+});
 
-  if (to.meta && to.meta.requiresAuth) {
-    const authAdmin = localStorage.getItem("dataAdminLogin");
-    if (authAdmin && authAdmin !== "") {
-      next();
+router.beforeEach((to, from, next) => {
+    if (to.meta && to.meta.required) {
+        const auth = localStorage.getItem("dataUserLogin");
+        if (auth && auth !== "") {
+            next();
+        } else {
+            alert("Bạn cần đăng nhập để sử dụng chức năng này!");
+            next({ path: "/login" });
+        }
     } else {
-      alert("Bạn cần đăng nhập để sử dụng chức năng này!");
-      next({ path: "/login" });
+        next();
     }
-  }
+
+    if (to.meta && to.meta.requiresAuth) {
+        const authAdmin = localStorage.getItem("dataAdminLogin");
+        if (authAdmin && authAdmin !== "") {
+            next();
+        } else {
+            alert("Bạn cần đăng nhập để sử dụng chức năng này!");
+            next({ path: "/login" });
+        }
+    }
 });
 export default router;
