@@ -19,7 +19,7 @@ import ScrollTopArrow from '../components/common/ScrollTopArrow.vue'
 import TheFooter from '../components/common/TheFooter.vue'
 import TheHeader from '../components/common/TheHeader.vue'
 import TheLastFooter from '../components/common/TheLastFooter.vue'
-import HomeBrand from '../components/home/Brand/HomeBrand.vue'
+import HomeBrand from '../components/home/Brand/HomeBrand.vue' 
 export default {
     name: 'Blog Details',
   components: { TheHeader, BreadCrumbs, HomeBrand, ScrollTopArrow,TheLastFooter, TheFooter, BlogContent, BlogComment },
@@ -30,3 +30,4 @@ export default {
 <style>
 
 </style>
+
